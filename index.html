@@ -127,7 +127,7 @@
 </footer>
 
 <script>
-const materials={'kisah-nabi-musa':{title:'Kisah Nabi Musa a.s.',desc:'Buku digital tentang Nabi Musa dengan 15 bab lengkap.',file:'kisah-nabi-musa-interaktif_v3.html'},'tafsir-al-maun':{title:'Tafsir Surah Al-Ma\'un',desc:'Tafsir surah Al-Ma\'un dengan 12 bab dan audio.',file:'tafsir-al-maun-interaktif.html'}, 'Beriman Kepada Kitab Kitab Allah':{title:'Beriman Kepada Kitab Kitab Allah',desc:'Tafsir surah Al-Ma\'un dengan 12 bab dan audio.',file:'tafsir-al-maun-interaktif.html'}};
+const materials={'kisah-nabi-musa':{title:'Kisah Nabi Musa a.s.',desc:'Buku digital tentang Nabi Musa dengan 15 bab lengkap.',file:'kisah-nabi-musa-interaktif_v3.html'},'tafsir-al-maun':{title:'Tafsir Surah Al-Ma\'un',desc:'Tafsir surah Al-Ma\'un dengan 12 bab dan audio.',file:'tafsir-al-maun-interaktif.html'}, 'Beriman Kepada Kitab Kitab Allah':{title:'Beriman Kepada Kitab Kitab Allah',desc:'Tafsir surah Al-Ma\'un dengan 12 bab dan audio.',file:'kitab kitab allah.html'}};
 function openMaterial(id){const m=materials[id];if(!m)return;document.getElementById('modalTitle').textContent=m.title;document.getElementById('modalDesc').textContent=m.desc;document.getElementById('confirmBtn').onclick=()=>{window.location.href=m.file};document.getElementById('materialModal').classList.add('active')}
 function closeMaterial(){document.getElementById('materialModal').classList.remove('active')}
 const t=document.getElementById('themeToggle'),s=localStorage.getItem('ilp-theme')||'light';
