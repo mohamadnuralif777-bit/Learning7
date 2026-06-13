@@ -1,0 +1,1701 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beriman kepada Kitab-kitab Allah SWT</title>
+  <style>
+    :root {
+      --ink: #18232b;
+      --muted: #66737b;
+      --paper: #fffef9;
+      --ivory: #fff8e8;
+      --linen: #f6edd8;
+      --emerald: #12725f;
+      --deep-emerald: #0c4e48;
+      --teal: #25899a;
+      --saffron: #e5aa2f;
+      --amber: #f2ca63;
+      --coral: #d96a55;
+      --rose: #a84f65;
+      --indigo: #445389;
+      --leaf: #6d9855;
+      --sky: #cce8ee;
+      --line: #dfd2b8;
+      --soft-teal: #e8f6f4;
+      --soft-gold: #fff3cc;
+      --soft-rose: #fff0ec;
+      --shadow: 0 18px 48px rgba(24, 35, 43, .13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(18, 114, 95, .06) 0 1px, transparent 1px 42px),
+        linear-gradient(180deg, rgba(229, 170, 47, .07) 0 1px, transparent 1px 42px),
+        linear-gradient(135deg, rgba(204, 232, 238, .7), rgba(255, 248, 232, .8) 34%, rgba(255, 240, 236, .72) 68%, rgba(232, 246, 244, .88)),
+        var(--paper);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 14.8px;
+      line-height: 1.68;
+    }
+
+    @page {
+      size: A4;
+      margin: 17mm 17mm 19mm;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page,
+      .chapter,
+      .section-page {
+        break-after: page;
+      }
+
+      .no-break,
+      .dalil,
+      .mini-card,
+      .source-card,
+      .term-card,
+      .check-card,
+      .activity-box {
+        break-inside: avoid;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    .page,
+    .chapter,
+    .section-page {
+      min-height: 260mm;
+      position: relative;
+      border-top: 7px solid rgba(18, 114, 95, .28);
+    }
+
+    .cover {
+      min-height: 297mm;
+      margin: -17mm;
+      padding: 22mm 20mm 18mm;
+      position: relative;
+      overflow: hidden;
+      color: #fff8df;
+      background:
+        linear-gradient(120deg, rgba(255,255,255,.54) 0 15%, transparent 15% 30%, rgba(255,255,255,.22) 30% 31%, transparent 31%),
+        linear-gradient(158deg, #fff1be 0%, #f0bd46 22%, #158171 23%, #0f5953 49%, #445389 50%, #d96a55 72%, #fff2cf 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 2px, transparent 2px 18px),
+        linear-gradient(90deg, transparent 0 10%, rgba(12,78,72,.32) 10% 11%, transparent 11% 89%, rgba(12,78,72,.28) 89% 90%, transparent 90%);
+      opacity: .8;
+    }
+
+    .cover-title,
+    .cover-art,
+    .cover-footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-title {
+      max-width: 172mm;
+      padding: 14px 15px 16px;
+      border-left: 5px solid rgba(255, 221, 130, .92);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(7, 42, 39, .72) 0%, rgba(7, 42, 39, .48) 68%, rgba(7, 42, 39, .05) 100%);
+      box-shadow: 0 16px 38px rgba(7, 31, 36, .24);
+      backdrop-filter: blur(2px);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0 0 12px;
+      color: #16252d;
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      line-height: 1.17;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 160mm;
+      color: #fffdf2;
+      font-size: 52px;
+      text-shadow: 0 3px 0 rgba(12, 44, 43, .5), 0 10px 24px rgba(0, 0, 0, .34);
+    }
+
+    h2 {
+      font-size: 31px;
+      margin-top: 6px;
+    }
+
+    h3 {
+      font-size: 21px;
+      margin-top: 20px;
+    }
+
+    h4 {
+      color: #1c645c;
+      font-size: 16.5px;
+      margin-top: 16px;
+    }
+
+    p {
+      margin: 0 0 11px;
+    }
+
+    .kicker,
+    .label,
+    .toc,
+    .chapter-ribbon,
+    .chapter-number,
+    .caption,
+    .ref,
+    .cover-badges span,
+    .book-mark,
+    .book-meta {
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 13px;
+      padding: 6px 11px;
+      color: #103b38;
+      background: rgba(255, 251, 238, .88);
+      border: 1px solid rgba(255, 255, 255, .66);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 2px;
+      background: linear-gradient(135deg, var(--emerald), var(--saffron));
+      transform: rotate(45deg);
+    }
+
+    .cover .subtitle {
+      max-width: 134mm;
+      margin-top: 12px;
+      color: #fff6d7;
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      font-size: 20px;
+      line-height: 1.45;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, .34);
+    }
+
+    .cover-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .cover-badges span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 29px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, .42);
+      border-radius: 999px;
+      background: rgba(255, 254, 249, .76);
+      color: #173f3b;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .cover-art {
+      width: 100%;
+      height: 148mm;
+      margin: 9mm 0 3mm;
+      filter: drop-shadow(0 22px 34px rgba(0,0,0,.22));
+    }
+
+    .cover-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      color: #fff6df;
+      font-size: 12.5px;
+    }
+
+    .cover-footer strong {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .book-mark {
+      width: 45mm;
+      padding: 9px 11px;
+      border-left: 3px solid var(--amber);
+      background: rgba(8, 42, 40, .58);
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--emerald);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      color: #40525b;
+      font-size: 16px;
+      line-height: 1.58;
+      margin-bottom: 16px;
+    }
+
+    .book-meta {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 3px double var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .toc {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .toc li {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .toc a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .toc .toc-sub {
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13.4px;
+    }
+
+    .chapter-head {
+      display: grid;
+      grid-template-columns: 1fr 73mm;
+      gap: 12mm;
+      align-items: center;
+      margin-bottom: 18px;
+      padding: 14px 14px 16px;
+      border: 1px solid #d8caa8;
+      border-left: 9px solid var(--emerald);
+      border-bottom: 4px solid var(--saffron);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(232, 246, 244, .96) 0%, rgba(255, 243, 204, .95) 55%, rgba(255, 240, 236, .94) 100%);
+      box-shadow: 0 10px 28px rgba(24, 35, 43, .08);
+    }
+
+    .chapter-head h2 {
+      color: #17313a;
+    }
+
+    .chapter-number {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--emerald), var(--indigo));
+      color: #fff;
+      font-size: 13px;
+      vertical-align: 4px;
+    }
+
+    .note,
+    .source-note,
+    .activity-box,
+    .summary-box,
+    .warning-box {
+      margin: 14px 0;
+      padding: 13px 15px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(135deg, #fff9ea, #fffef9);
+    }
+
+    .source-note {
+      background: linear-gradient(135deg, var(--soft-teal), #fffef9);
+      border-color: #c6e4df;
+    }
+
+    .warning-box {
+      background: linear-gradient(135deg, var(--soft-rose), #fff8e5);
+      border-color: #edc8bf;
+    }
+
+    .summary-box {
+      border-top: 5px solid var(--leaf);
+      background: linear-gradient(135deg, #f0f8ea, #fffef9);
+    }
+
+    .note strong,
+    .source-note strong,
+    .warning-box strong,
+    .summary-box strong,
+    .activity-box strong {
+      color: #155c54;
+    }
+
+    .dalil {
+      margin: 14px 0 16px;
+      padding: 14px 15px 12px;
+      border-left: 6px solid var(--emerald);
+      border-radius: 0 8px 8px 0;
+      background:
+        linear-gradient(90deg, rgba(18, 114, 95, .16) 0%, rgba(255, 243, 204, .72) 58%, #fffef9 100%);
+      box-shadow: 0 8px 22px rgba(18, 114, 95, .08);
+    }
+
+    .dalil.hadith {
+      border-left-color: var(--rose);
+      background:
+        linear-gradient(90deg, rgba(168, 79, 101, .16) 0%, rgba(255, 243, 204, .76) 58%, #fffef9 100%);
+    }
+
+    .dalil-title {
+      margin-bottom: 6px;
+      color: #123d39;
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    .dalil .arabic {
+      direction: rtl;
+      unicode-bidi: isolate;
+      margin: 8px 0 10px;
+      color: #12342f;
+      font-family: "KFGQPC HAFS Uthmanic Script", "KFGQPC Uthmanic Script HAFS", "UthmanicHafs1 Ver18", "Traditional Arabic", "Amiri", "Scheherazade New", serif;
+      font-size: 23px;
+      line-height: 2.05;
+      text-align: right;
+    }
+
+    .meaning {
+      color: #344852;
+    }
+
+    .translation {
+      margin: 8px 0;
+      padding: 9px 11px;
+      border-top: 1px solid rgba(18, 114, 95, .2);
+      border-bottom: 1px solid rgba(18, 114, 95, .14);
+      background: rgba(255, 255, 255, .5);
+      color: #2d3f49;
+      font-size: 13.8px;
+    }
+
+    .translation strong {
+      color: #155c54;
+    }
+
+    .ref {
+      margin-top: 7px;
+      color: var(--emerald);
+      font-size: 12.5px;
+      font-weight: 850;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 14px 0;
+    }
+
+    .grid-three {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .mini-card,
+    .source-card,
+    .term-card,
+    .check-card {
+      min-height: 100%;
+      padding: 13px 14px;
+      border: 1px solid #ded0b2;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #fffef9 0%, #fff6e3 100%);
+      box-shadow: 0 8px 22px rgba(24, 35, 43, .06);
+    }
+
+    .mini-card:nth-child(4n+1),
+    .source-card:nth-child(4n+1),
+    .term-card:nth-child(4n+1),
+    .check-card:nth-child(4n+1) {
+      border-top: 5px solid var(--emerald);
+    }
+
+    .mini-card:nth-child(4n+2),
+    .source-card:nth-child(4n+2),
+    .term-card:nth-child(4n+2),
+    .check-card:nth-child(4n+2) {
+      border-top: 5px solid var(--saffron);
+    }
+
+    .mini-card:nth-child(4n+3),
+    .source-card:nth-child(4n+3),
+    .term-card:nth-child(4n+3),
+    .check-card:nth-child(4n+3) {
+      border-top: 5px solid var(--coral);
+    }
+
+    .mini-card:nth-child(4n+4),
+    .source-card:nth-child(4n+4),
+    .term-card:nth-child(4n+4),
+    .check-card:nth-child(4n+4) {
+      border-top: 5px solid var(--indigo);
+    }
+
+    .mini-card h4,
+    .source-card h4,
+    .term-card h4,
+    .check-card h4 {
+      margin-top: 0;
+      margin-bottom: 7px;
+      color: #214f58;
+      font-size: 15.5px;
+    }
+
+    .mini-card p,
+    .source-card p,
+    .term-card p,
+    .check-card p {
+      margin-bottom: 0;
+      color: #445660;
+      font-size: 13.6px;
+    }
+
+    .quote-panel {
+      margin: 16px 0;
+      padding: 16px 18px;
+      border: 1px solid #c4dedd;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(18, 114, 95, .18), transparent 46%),
+        linear-gradient(180deg, #fff7db, #f5fcfb);
+    }
+
+    .quote-panel strong {
+      color: #125a53;
+    }
+
+    .illustration {
+      margin: 0;
+    }
+
+    .illustration svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid rgba(229, 170, 47, .42);
+      background: #fff9ea;
+      box-shadow: 0 10px 24px rgba(24, 35, 43, .08);
+    }
+
+    .small-ill svg {
+      aspect-ratio: 500 / 330;
+    }
+
+    .wide-ill {
+      margin: 14px 0 16px;
+    }
+
+    .wide-ill svg {
+      aspect-ratio: 900 / 330;
+    }
+
+    .caption {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12.2px;
+      line-height: 1.45;
+    }
+
+    .callout-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .callout-strip div {
+      min-height: 78px;
+      padding: 10px 9px;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--emerald);
+    }
+
+    .callout-strip div:nth-child(2) {
+      background: var(--indigo);
+    }
+
+    .callout-strip div:nth-child(3) {
+      background: var(--coral);
+    }
+
+    .callout-strip div:nth-child(4) {
+      background: var(--leaf);
+    }
+
+    .callout-strip strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .callout-strip span {
+      display: block;
+      font-size: 12.2px;
+      line-height: 1.4;
+    }
+
+    .timeline {
+      margin: 16px 0;
+      border-left: 4px solid var(--emerald);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 14px 18px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: -9px;
+      width: 14px;
+      height: 14px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: var(--saffron);
+      box-shadow: 0 0 0 2px var(--emerald);
+    }
+
+    .timeline-item h4 {
+      margin: 0 0 4px;
+      font-size: 15.7px;
+      color: #17303b;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: #43545d;
+      font-size: 13.8px;
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: 29mm 1fr 1fr;
+      margin: 14px 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 13.4px;
+    }
+
+    .matrix div {
+      padding: 8px 9px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.56);
+    }
+
+    .matrix div:nth-child(3n) {
+      border-right: 0;
+    }
+
+    .matrix .head {
+      color: #163f3a;
+      background: #e5f4ef;
+      font-weight: 800;
+    }
+
+    .matrix .book {
+      color: #163f3a;
+      background: #fff1c7;
+      font-weight: 850;
+    }
+
+    table {
+      width: 100%;
+      margin: 14px 0;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+
+    th,
+    td {
+      padding: 8px 9px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      background: #e6f5f1;
+      color: #173b43;
+      text-align: left;
+    }
+
+    ol,
+    ul {
+      margin-top: 7px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .bibliography li {
+      margin-bottom: 8px;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      padding: 13px 15px;
+      border-top: 3px solid var(--emerald);
+      background: linear-gradient(135deg, #f5fbfb, #fff3df);
+      color: #41525b;
+      font-size: 13px;
+    }
+
+    .divider {
+      width: 58px;
+      height: 5px;
+      margin: 10px 0 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--emerald), var(--saffron), var(--coral), var(--indigo));
+    }
+
+    .chapter-ribbon {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5px 9px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #133d3a, var(--emerald), var(--indigo), var(--coral));
+      color: #fff8e5;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    @media screen {
+      body {
+        padding: 18px;
+      }
+
+      .page,
+      .chapter,
+      .section-page {
+        width: min(100%, 210mm);
+        min-height: 297mm;
+        margin: 0 auto 18px;
+        padding: 17mm;
+        background:
+          linear-gradient(180deg, rgba(255, 254, 249, .97) 0%, rgba(255, 247, 230, .97) 100%);
+        box-shadow: var(--shadow);
+      }
+
+      .cover {
+        width: min(100%, 210mm);
+        margin: 0 auto 18px;
+        box-shadow: var(--shadow);
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding: 0;
+      }
+
+      .page,
+      .chapter,
+      .section-page {
+        width: 100%;
+        min-height: auto;
+        padding: 24px 18px;
+        margin: 0;
+        box-shadow: none;
+      }
+
+      .cover {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 36px 20px 28px;
+      }
+
+      h1 {
+        font-size: 39px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .chapter-head,
+      .grid-two,
+      .grid-three,
+      .callout-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .cover-footer {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .book-mark {
+        width: 100%;
+      }
+
+      .matrix {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix div {
+        border-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <div class="cover-title">
+      <div class="kicker">Buku Materi PAI</div>
+      <h1>Beriman kepada Kitab-kitab Allah SWT</h1>
+      <p class="subtitle">Mengenal wahyu Allah, kitab-kitab yang wajib diimani, dan cara menjadikan Al-Qur'an sebagai petunjuk hidup.</p>
+      <div class="cover-badges">
+        <span>Rukun iman ke-3</span>
+        <span>Dalil ringkas</span>
+        <span>Ilustrasi simbolik</span>
+        <span>Siap cetak A4</span>
+      </div>
+    </div>
+
+    <figure class="cover-art" aria-label="Ilustrasi simbolik kitab-kitab Allah">
+      <svg viewBox="0 0 1100 650" role="img">
+        <defs>
+          <linearGradient id="coverSky" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#123f3c"/>
+            <stop offset=".44" stop-color="#1c8a78"/>
+            <stop offset=".45" stop-color="#efbf46"/>
+            <stop offset=".63" stop-color="#f6de91"/>
+            <stop offset=".64" stop-color="#46538b"/>
+            <stop offset="1" stop-color="#162849"/>
+          </linearGradient>
+          <linearGradient id="bookGold" x1="0" x2="1">
+            <stop offset="0" stop-color="#fff2be"/>
+            <stop offset=".5" stop-color="#e7aa31"/>
+            <stop offset="1" stop-color="#bf742a"/>
+          </linearGradient>
+          <pattern id="mosaic" width="44" height="44" patternUnits="userSpaceOnUse">
+            <path d="M22 2 L42 22 L22 42 L2 22 Z" fill="none" stroke="#fff7d5" stroke-width="2" opacity=".35"/>
+            <path d="M22 10 L34 22 L22 34 L10 22 Z" fill="none" stroke="#fff7d5" stroke-width="1.5" opacity=".35"/>
+          </pattern>
+        </defs>
+        <rect width="1100" height="650" fill="url(#coverSky)"/>
+        <rect width="1100" height="650" fill="url(#mosaic)" opacity=".72"/>
+        <path d="M0 498 C141 435 269 458 396 410 C545 354 657 380 792 334 C895 299 998 289 1100 316 L1100 650 L0 650 Z" fill="#0d3535" opacity=".74"/>
+        <path d="M0 566 C158 510 282 522 410 563 C573 616 724 597 890 535 C978 502 1047 498 1100 511 L1100 650 L0 650 Z" fill="#133149" opacity=".64"/>
+        <circle cx="810" cy="118" r="56" fill="#f4c95e"/>
+        <path d="M92 190 C148 156 207 158 255 194" fill="none" stroke="#fff5d1" stroke-width="9" stroke-linecap="round" opacity=".78"/>
+        <path d="M667 211 C727 177 784 181 838 214" fill="none" stroke="#fff5d1" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+        <path d="M192 481 C246 355 335 287 470 260 C450 382 358 468 192 481 Z" fill="#fff3c3" stroke="#e5aa2f" stroke-width="11"/>
+        <path d="M302 489 C369 383 472 330 620 326 C585 430 474 495 302 489 Z" fill="#f7df91" stroke="#12725f" stroke-width="11"/>
+        <path d="M472 492 C552 389 662 343 812 357 C762 456 641 503 472 492 Z" fill="#fff4cd" stroke="#d96a55" stroke-width="11"/>
+        <path d="M664 488 C729 405 811 371 928 384 C886 459 793 496 664 488 Z" fill="#e8f6f4" stroke="#445389" stroke-width="11"/>
+        <path d="M207 516 C392 470 584 469 784 516" fill="none" stroke="#fff7d5" stroke-width="16" stroke-linecap="round"/>
+        <path d="M320 221 C372 184 427 185 478 222 M518 205 C580 166 642 171 701 211" fill="none" stroke="#fff7d5" stroke-width="8" stroke-linecap="round" opacity=".78"/>
+        <path d="M548 125 L588 188 L661 205 L607 254 L613 328 L548 294 L481 328 L489 254 L435 205 L507 188 Z" fill="url(#bookGold)" stroke="#fff7d5" stroke-width="7"/>
+        <path d="M548 150 L574 195 L626 209 L587 242 L592 294 L548 270 L503 294 L509 242 L470 209 L522 195 Z" fill="#12725f" opacity=".86"/>
+        <path d="M526 220 H574 M536 242 H564" stroke="#fff7d5" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <div class="cover-footer">
+      <div>
+        <strong>Materi Akidah Islam</strong>
+        Disusun untuk pembelajaran, diskusi kelas, dan bahan bacaan mandiri.
+      </div>
+      <div class="book-mark">
+        <strong>Fokus belajar</strong>
+        Yakin, memahami, menghormati, dan mengamalkan petunjuk Allah.
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="prakata">
+    <span class="label">Pembuka</span>
+    <h2>Prakata</h2>
+    <div class="divider"></div>
+    <p class="lead">Beriman kepada kitab-kitab Allah SWT adalah bagian penting dari rukun iman. Materi ini mengajak pembaca memahami bahwa Allah tidak membiarkan manusia berjalan tanpa petunjuk. Allah menurunkan wahyu kepada para rasul agar manusia mengenal kebenaran, membedakan yang baik dan buruk, serta membangun hidup yang diridhai-Nya.</p>
+    <p>Buku kecil ini ditulis dengan bahasa yang mudah, tetapi tetap menjaga pokok-pokok akidah. Pembaca akan diajak mengenal makna iman kepada kitab Allah, kitab-kitab yang wajib diketahui, kedudukan Al-Qur'an, sikap yang benar terhadap wahyu, serta contoh perilaku nyata dalam kehidupan sehari-hari.</p>
+
+    <div class="grid-three">
+      <div class="mini-card">
+        <h4>Tujuan 1</h4>
+        <p>Memahami pengertian beriman kepada kitab-kitab Allah SWT.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Tujuan 2</h4>
+        <p>Menyebutkan kitab-kitab Allah dan rasul yang menerimanya.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Tujuan 3</h4>
+        <p>Menunjukkan perilaku yang mencerminkan iman kepada wahyu Allah.</p>
+      </div>
+    </div>
+
+    <div class="source-note">
+      <strong>Catatan belajar:</strong> Iman kepada kitab Allah tidak berhenti pada menghafal nama kitab. Iman ini harus melahirkan rasa hormat kepada wahyu, semangat membaca Al-Qur'an, keinginan memahami petunjuk Allah, dan kesiapan memperbaiki akhlak.
+    </div>
+
+    <div class="book-meta">
+      <p><strong>Judul:</strong> Beriman kepada Kitab-kitab Allah SWT</p>
+      <p><strong>Jenis:</strong> Buku materi PAI berbentuk HTML siap cetak A4</p>
+      <p><strong>Ruang lingkup:</strong> Pengertian, dalil, kitab-kitab Allah, fungsi wahyu, perilaku, hikmah, latihan, glosarium, dan rujukan</p>
+    </div>
+  </section>
+
+  <section class="page" id="daftar-isi">
+    <span class="label">Peta Buku</span>
+    <h2>Daftar Isi</h2>
+    <div class="divider"></div>
+    <ol class="toc">
+      <li><a href="#prakata">Prakata</a><span>1</span></li>
+      <li><a href="#bab-i">BAB I - Makna Beriman kepada Kitab Allah</a><span>3</span></li>
+      <li class="toc-sub"><a href="#bab-i">Iman, wahyu, kitab, dan suhuf</a><span></span></li>
+      <li><a href="#bab-ii">BAB II - Dalil dan Kedudukan dalam Rukun Iman</a><span>6</span></li>
+      <li class="toc-sub"><a href="#bab-ii">Ayat Al-Qur'an dan Hadis Jibril</a><span></span></li>
+      <li><a href="#bab-iii">BAB III - Kitab-kitab Allah yang Wajib Diketahui</a><span>9</span></li>
+      <li class="toc-sub"><a href="#bab-iii">Taurat, Zabur, Injil, Al-Qur'an, dan suhuf</a><span></span></li>
+      <li><a href="#bab-iv">BAB IV - Fungsi Kitab Allah bagi Manusia</a><span>13</span></li>
+      <li><a href="#bab-v">BAB V - Al-Qur'an sebagai Kitab Terakhir</a><span>16</span></li>
+      <li><a href="#bab-vi">BAB VI - Sikap terhadap Kitab-kitab Allah</a><span>19</span></li>
+      <li><a href="#bab-vii">BAB VII - Perilaku Sehari-hari</a><span>22</span></li>
+      <li><a href="#bab-viii">BAB VIII - Hikmah dan Evaluasi</a><span>25</span></li>
+      <li><a href="#penutup">Penutup</a><span>29</span></li>
+      <li><a href="#glosarium">Glosarium</a><span>30</span></li>
+      <li><a href="#daftar-pustaka">Daftar Pustaka</a><span>31</span></li>
+    </ol>
+  </section>
+
+  <section class="chapter" id="bab-i">
+    <div class="chapter-head">
+      <div>
+        <span class="chapter-ribbon">BAB I</span>
+        <h2><span class="chapter-number">1</span>Makna Beriman kepada Kitab Allah</h2>
+        <p class="lead">Beriman kepada kitab-kitab Allah berarti meyakini bahwa Allah SWT menurunkan wahyu kepada para rasul-Nya sebagai petunjuk bagi manusia.</p>
+      </div>
+      <figure class="illustration small-ill">
+        <svg viewBox="0 0 500 330" aria-label="Ilustrasi kitab dan cahaya">
+          <rect width="500" height="330" fill="#fff8e7"/>
+          <path d="M0 238 C84 198 169 204 259 235 C352 269 425 254 500 211 L500 330 L0 330 Z" fill="#b8d4c2"/>
+          <circle cx="378" cy="78" r="40" fill="#f2ca63"/>
+          <path d="M130 228 C179 173 244 154 331 169 C294 220 230 248 130 228 Z" fill="#fffdf7" stroke="#12725f" stroke-width="8"/>
+          <path d="M183 239 C230 193 295 181 374 195 C336 235 269 258 183 239 Z" fill="#fff3c7" stroke="#d96a55" stroke-width="8"/>
+          <path d="M230 105 L251 141 L292 151 L261 178 L266 220 L230 200 L194 220 L199 178 L168 151 L209 141 Z" fill="#e5aa2f"/>
+          <path d="M86 278 H414" stroke="#445389" stroke-width="9" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Wahyu Allah menjadi cahaya yang menuntun akal, hati, dan amal.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Pengertian Iman kepada Kitab Allah</h3>
+    <p>Iman kepada kitab-kitab Allah adalah keyakinan yang kuat bahwa Allah SWT menurunkan kitab suci kepada para rasul pilihan-Nya. Kitab-kitab itu berisi petunjuk, ajaran tauhid, peringatan, hukum, nasihat, dan kabar gembira agar manusia hidup sesuai kehendak Allah.</p>
+    <p>Dalam akidah Islam, kita membenarkan semua wahyu yang Allah turunkan. Kita mengimani kitab-kitab sebelumnya dalam bentuk aslinya, dan kita menjadikan Al-Qur'an sebagai pedoman terakhir yang wajib dibaca, dipahami, dijaga, dan diamalkan.</p>
+
+    <div class="quote-panel">
+      <strong>Inti bab:</strong> Beriman kepada kitab Allah bukan sekadar percaya bahwa kitab itu pernah diturunkan. Iman ini menuntut rasa hormat kepada wahyu dan ketaatan kepada petunjuk Allah.
+    </div>
+
+    <h3>Kitab, Suhuf, dan Wahyu</h3>
+    <p>Dalam bahasa Arab, <em>kitab</em> berarti sesuatu yang ditulis. Dalam pembahasan akidah, kitab Allah adalah wahyu yang Allah turunkan kepada para rasul sebagai petunjuk agar manusia selamat dan bahagia di dunia serta akhirat.</p>
+    <p><em>Suhuf</em> berarti lembaran-lembaran wahyu. Al-Qur'an menyebut suhuf Nabi Ibrahim a.s. dan Nabi Musa a.s. Adapun wahyu secara syariat adalah pemberitahuan Allah kepada para nabi tentang apa yang Allah kehendaki, baik berupa syariat maupun kitab.</p>
+    <div class="grid-two">
+      <div class="mini-card">
+        <h4>Kitab</h4>
+        <p>Wahyu yang menjadi pedoman besar bagi umat, seperti Taurat, Zabur, Injil, dan Al-Qur'an.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Suhuf</h4>
+        <p>Lembaran wahyu yang Allah berikan kepada sebagian nabi, di antaranya Nabi Ibrahim a.s. dan Nabi Musa a.s.</p>
+      </div>
+    </div>
+
+    <h3>Cara Wahyu Disampaikan</h3>
+    <p>Materi HSI menjelaskan bahwa wahyu dapat sampai kepada nabi dengan beberapa cara. Untuk memudahkan, ingat tiga bentuk besarnya berikut ini.</p>
+    <div class="grid-three">
+      <div class="mini-card">
+        <h4>Ke dalam hati</h4>
+        <p>Allah memberi ilham wahyu kepada nabi dengan cara yang Allah kehendaki.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Berbicara langsung</h4>
+        <p>Allah berbicara kepada nabi dari balik hijab, seperti Allah berbicara kepada Nabi Musa a.s.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Melalui malaikat</h4>
+        <p>Malaikat Jibril a.s. membawa wahyu dari Allah kepada para nabi dan rasul.</p>
+      </div>
+    </div>
+
+    <h3>Mengapa Manusia Membutuhkan Wahyu?</h3>
+    <p>Akal manusia adalah nikmat besar. Dengan akal, manusia dapat berpikir, belajar, dan memilih. Namun akal tetap memiliki batas. Manusia bisa salah menilai karena hawa nafsu, kebiasaan buruk, tekanan lingkungan, atau informasi yang keliru. Wahyu Allah menuntun manusia agar tidak hanya mengandalkan perkiraan.</p>
+    <ol>
+      <li><strong>Wahyu mengenalkan Allah dengan benar.</strong> Manusia tidak membuat-buat gambaran tentang Tuhan menurut selera sendiri.</li>
+      <li><strong>Wahyu membimbing ibadah.</strong> Cara beribadah harus sesuai petunjuk Allah, bukan sekadar tradisi.</li>
+      <li><strong>Wahyu membentuk akhlak.</strong> Manusia belajar jujur, adil, amanah, sabar, dan kasih sayang.</li>
+      <li><strong>Wahyu menjaga hidup sosial.</strong> Keluarga, sekolah, dan masyarakat membutuhkan aturan yang adil.</li>
+    </ol>
+
+    <div class="activity-box">
+      <strong>Latihan singkat:</strong> Tulis tiga keadaan di sekolah yang membutuhkan petunjuk Allah, misalnya saat ujian, berteman, atau menggunakan media sosial. Jelaskan sikap yang seharusnya dilakukan.
+    </div>
+  </section>
+
+  <section class="chapter" id="bab-ii">
+    <div class="chapter-head">
+      <div>
+        <span class="chapter-ribbon">BAB II</span>
+        <h2><span class="chapter-number">2</span>Dalil dan Kedudukan dalam Rukun Iman</h2>
+        <p class="lead">Iman kepada kitab-kitab Allah adalah rukun iman ketiga. Tanpa iman kepada wahyu, seseorang kehilangan sumber petunjuk yang Allah turunkan.</p>
+      </div>
+      <figure class="illustration small-ill">
+        <svg viewBox="0 0 500 330" aria-label="Ilustrasi enam rukun iman">
+          <rect width="500" height="330" fill="#f4fbfb"/>
+          <path d="M0 238 C78 200 159 200 249 237 C346 277 420 252 500 213 L500 330 L0 330 Z" fill="#c6d793"/>
+          <circle cx="250" cy="166" r="96" fill="#fffdf7" stroke="#12725f" stroke-width="8"/>
+          <path d="M250 65 L280 142 L363 148 L299 201 L319 281 L250 237 L181 281 L201 201 L137 148 L220 142 Z" fill="#e5aa2f" opacity=".9"/>
+          <circle cx="250" cy="166" r="36" fill="#445389"/>
+          <path d="M228 166 H272 M250 144 V188" stroke="#fff8e3" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Iman kepada kitab Allah berada dalam rangkaian rukun iman.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Dalil dari Al-Qur'an</h3>
+    <div class="dalil">
+      <div class="dalil-title">QS. An-Nisa [4]: 136</div>
+      <div class="arabic">يَا أَيُّهَا الَّذِينَ آمَنُوا آمِنُوا بِاللَّهِ وَرَسُولِهِ وَالْكِتَابِ الَّذِي نَزَّلَ عَلَىٰ رَسُولِهِ وَالْكِتَابِ الَّذِي أَنْزَلَ مِنْ قَبْلُ ۚ وَمَنْ يَكْفُرْ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الْآخِرِ فَقَدْ ضَلَّ ضَلَالًا بَعِيدًا</div>
+      <div class="translation"><strong>Makna ayat:</strong> Allah memerintahkan orang beriman agar tetap beriman kepada Allah, Rasul-Nya, kitab yang diturunkan kepada Rasul, dan kitab-kitab yang telah diturunkan sebelumnya.</div>
+      <div class="meaning">Ayat ini menunjukkan bahwa iman kepada kitab Allah mencakup Al-Qur'an dan kitab-kitab yang Allah turunkan sebelum Al-Qur'an.</div>
+      <div class="ref">Rujukan: QS. An-Nisa [4]: 136</div>
+    </div>
+
+    <div class="dalil">
+      <div class="dalil-title">QS. Al-Baqarah [2]: 285</div>
+      <div class="arabic">آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِنْ رُسُلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ</div>
+      <div class="translation"><strong>Makna ayat:</strong> Rasul dan orang-orang beriman membenarkan wahyu yang diturunkan Allah; mereka beriman kepada Allah, malaikat-Nya, kitab-kitab-Nya, dan rasul-rasul-Nya.</div>
+      <div class="meaning">Ayat ini menegaskan bahwa iman kepada kitab Allah tidak boleh dipisahkan dari iman kepada Allah dan rasul-rasul-Nya.</div>
+      <div class="ref">Rujukan: QS. Al-Baqarah [2]: 285</div>
+    </div>
+
+    <h3>Dalil dari Hadis</h3>
+    <div class="dalil hadith">
+      <div class="dalil-title">Hadis Jibril tentang iman</div>
+      <div class="arabic">أَنْ تُؤْمِنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الْآخِرِ، وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ</div>
+      <div class="translation"><strong>Makna hadis:</strong> Nabi Muhammad saw. menjelaskan bahwa iman mencakup beriman kepada Allah, malaikat, kitab-kitab, rasul-rasul, hari akhir, dan takdir Allah.</div>
+      <div class="meaning">Hadis ini menjadi dasar bahwa iman kepada kitab-kitab Allah adalah rukun iman yang wajib diyakini oleh setiap muslim.</div>
+      <div class="ref">Rujukan: Shahih Muslim, hadis Jibril</div>
+    </div>
+
+    <h3>Kedudukan Iman kepada Kitab Allah</h3>
+    <p>Iman kepada kitab Allah menjadi jembatan antara iman kepada rasul dan amal dalam kehidupan. Rasul menerima wahyu, menyampaikan wahyu, dan memberi contoh bagaimana wahyu diamalkan. Karena itu, orang yang mengaku beriman kepada kitab Allah harus menghormati para rasul dan mengikuti petunjuk yang dibawa Nabi Muhammad saw.</p>
+
+    <h3>Empat Cara Beriman kepada Kitab Allah</h3>
+    <p>Dalam materi HSI, cara beriman kepada kitab-kitab Allah diringkas menjadi empat hal. Kalimatnya sederhana: yakini asalnya, kenali namanya, benarkan kabarnya, lalu tunduk kepada hukumnya.</p>
+
+    <div class="callout-strip">
+      <div><strong>Turun dari Allah</strong><span>Kitab Allah bukan ucapan manusia atau karangan nabi.</span></div>
+      <div><strong>Kenali namanya</strong><span>Yang disebut namanya kita imani rinci, yang tidak disebut kita imani global.</span></div>
+      <div><strong>Benarkan kabarnya</strong><span>Kabar yang sahih dalam Al-Qur'an wajib dibenarkan.</span></div>
+      <div><strong>Tunduk hukumnya</strong><span>Untuk umat Nabi Muhammad saw., syariat yang diikuti adalah Al-Qur'an dan Sunnah.</span></div>
+    </div>
+
+    <div class="warning-box">
+      <strong>Hati-hati:</strong> Iman kepada kitab Allah tidak boleh dipahami hanya sebagai pengetahuan di kepala. Jika seseorang mengetahui Al-Qur'an sebagai petunjuk tetapi sengaja meremehkan perintah Allah, berarti imannya belum tampak dalam perilaku.
+    </div>
+  </section>
+
+  <section class="chapter" id="bab-iii">
+    <div class="chapter-head">
+      <div>
+        <span class="chapter-ribbon">BAB III</span>
+        <h2><span class="chapter-number">3</span>Kitab-kitab Allah yang Wajib Diketahui</h2>
+        <p class="lead">Umat Islam wajib mengimani semua kitab Allah. Di antara kitab yang disebut secara khusus adalah Taurat, Zabur, Injil, dan Al-Qur'an.</p>
+      </div>
+      <figure class="illustration small-ill">
+        <svg viewBox="0 0 500 330" aria-label="Ilustrasi empat kitab">
+          <rect width="500" height="330" fill="#fff8e7"/>
+          <path d="M0 236 C90 197 171 205 257 236 C348 268 426 253 500 211 L500 330 L0 330 Z" fill="#b9d5cf"/>
+          <rect x="76" y="112" width="72" height="128" rx="8" fill="#12725f"/>
+          <rect x="174" y="92" width="72" height="148" rx="8" fill="#e5aa2f"/>
+          <rect x="272" y="112" width="72" height="128" rx="8" fill="#d96a55"/>
+          <rect x="370" y="82" width="72" height="158" rx="8" fill="#445389"/>
+          <path d="M92 144 H132 M190 129 H230 M288 144 H328 M386 120 H426" stroke="#fff8e3" stroke-width="7" stroke-linecap="round"/>
+          <path d="M90 240 H440" stroke="#143d3a" stroke-width="9" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Empat kitab yang masyhur disebut dalam materi akidah Islam.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Empat Kitab yang Disebutkan</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Kitab</th>
+          <th>Rasul Penerima</th>
+          <th>Pokok Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Taurat</strong></td>
+          <td>Nabi Musa a.s.</td>
+          <td>Berisi petunjuk dan cahaya bagi Bani Israil. Taurat yang asli adalah wahyu Allah, bukan ucapan Nabi Musa a.s.</td>
+        </tr>
+        <tr>
+          <td><strong>Zabur</strong></td>
+          <td>Nabi Daud a.s.</td>
+          <td>Kitab yang Allah berikan kepada Nabi Daud a.s. Al-Qur'an menyebut namanya secara jelas.</td>
+        </tr>
+        <tr>
+          <td><strong>Injil</strong></td>
+          <td>Nabi Isa a.s.</td>
+          <td>Berisi petunjuk dan cahaya, membenarkan Taurat yang asli, dan membawa kabar gembira tentang Nabi Muhammad saw.</td>
+        </tr>
+        <tr>
+          <td><strong>Al-Qur'an</strong></td>
+          <td>Nabi Muhammad saw.</td>
+          <td>Kitab terakhir, pembenar kitab sebelumnya, penjaga kebenaran, dan pedoman hidup sampai akhir zaman.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Rujukan Ayat tentang Kitab-kitab Allah</h3>
+    <div class="matrix no-break">
+      <div class="head">Kitab</div>
+      <div class="head">Rasul</div>
+      <div class="head">Rujukan Al-Qur'an</div>
+      <div class="book">Taurat</div>
+      <div>Nabi Musa a.s.</div>
+      <div>QS. Ali 'Imran [3]: 3; QS. Al-Ma'idah [5]: 44</div>
+      <div class="book">Zabur</div>
+      <div>Nabi Daud a.s.</div>
+      <div>QS. An-Nisa [4]: 163; QS. Al-Isra [17]: 55</div>
+      <div class="book">Injil</div>
+      <div>Nabi Isa a.s.</div>
+      <div>QS. Al-Ma'idah [5]: 46</div>
+      <div class="book">Al-Qur'an</div>
+      <div>Nabi Muhammad saw.</div>
+      <div>QS. Al-Baqarah [2]: 185; QS. Al-Ma'idah [5]: 48</div>
+    </div>
+
+    <div class="dalil">
+      <div class="dalil-title">QS. Ali 'Imran [3]: 3</div>
+      <div class="arabic">نَزَّلَ عَلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِمَا بَيْنَ يَدَيْهِ وَأَنْزَلَ التَّوْرَاةَ وَالْإِنْجِيلَ</div>
+      <div class="translation"><strong>Makna ayat:</strong> Allah menurunkan Al-Qur'an dengan kebenaran, membenarkan kitab sebelumnya, dan Allah telah menurunkan Taurat serta Injil.</div>
+      <div class="meaning">Ayat ini menjadi salah satu dasar bahwa Taurat, Injil, dan Al-Qur'an adalah kitab yang Allah turunkan.</div>
+      <div class="ref">Rujukan: QS. Ali 'Imran [3]: 3</div>
+    </div>
+
+    <h3>Suhuf Nabi Ibrahim dan Nabi Musa</h3>
+    <p>Selain kitab, Al-Qur'an juga menyebut suhuf. Dalam QS. Al-A'la [87]: 18-19 disebutkan suhuf Nabi Ibrahim a.s. dan Nabi Musa a.s. Penyebutan ini mengajarkan bahwa petunjuk Allah telah disampaikan kepada manusia melalui para nabi sejak masa yang sangat lama.</p>
+
+    <div class="dalil">
+      <div class="dalil-title">QS. Al-A'la [87]: 18-19</div>
+      <div class="arabic">إِنَّ هَٰذَا لَفِي الصُّحُفِ الْأُولَىٰ ۝ صُحُفِ إِبْرَاهِيمَ وَمُوسَىٰ</div>
+      <div class="translation"><strong>Makna ayat:</strong> Ajaran ini juga terdapat dalam suhuf terdahulu, yaitu suhuf Nabi Ibrahim dan Nabi Musa.</div>
+      <div class="meaning">Kita mengimani adanya suhuf karena Al-Qur'an menyebutkannya.</div>
+      <div class="ref">Rujukan: QS. Al-A'la [87]: 18-19</div>
+    </div>
+
+    <div class="grid-two">
+      <div class="mini-card">
+        <h4>Suhuf Ibrahim</h4>
+        <p>Menunjukkan bahwa Nabi Ibrahim a.s. menerima lembaran wahyu dari Allah.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Suhuf Musa</h4>
+        <p>Menunjukkan bahwa Nabi Musa a.s. juga menerima lembaran wahyu selain penyebutan Taurat.</p>
+      </div>
+    </div>
+
+    <div class="source-note">
+      <strong>Catatan akidah:</strong> Kitab atau suhuf yang namanya disebut dalam dalil kita imani secara rinci. Adapun kitab Allah yang tidak kita ketahui namanya, kita tetap mengimaninya secara global: Allah menurunkan wahyu kepada para rasul-Nya. Untuk pengamalan syariat sekarang, umat Islam berpegang kepada Al-Qur'an dan Sunnah Nabi Muhammad saw.
+    </div>
+  </section>
+
+  <section class="chapter" id="bab-iv">
+    <div class="chapter-head">
+      <div>
+        <span class="chapter-ribbon">BAB IV</span>
+        <h2><span class="chapter-number">4</span>Fungsi Kitab Allah bagi Manusia</h2>
+        <p class="lead">Kitab Allah adalah petunjuk yang membimbing manusia dalam iman, ibadah, akhlak, hukum, dan hubungan sosial.</p>
+      </div>
+      <figure class="illustration small-ill">
+        <svg viewBox="0 0 500 330" aria-label="Ilustrasi jalan petunjuk">
+          <rect width="500" height="330" fill="#f4fbfb"/>
+          <circle cx="377" cy="75" r="42" fill="#f2ca63"/>
+          <path d="M0 235 C82 199 166 203 253 236 C348 272 424 253 500 211 L500 330 L0 330 Z" fill="#c1d792"/>
+          <path d="M80 282 C141 231 196 205 249 204 C310 204 366 236 421 282" fill="none" stroke="#12725f" stroke-width="15" stroke-linecap="round"/>
+          <path d="M250 91 L280 150 L345 160 L298 205 L309 270 L250 239 L191 270 L202 205 L155 160 L220 150 Z" fill="#fffdf7" stroke="#e5aa2f" stroke-width="8"/>
+          <path d="M221 187 H279 M233 209 H267" stroke="#445389" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Kitab Allah menunjukkan arah saat manusia menghadapi banyak pilihan.</figcaption>
+      </figure>
+    </div>
+
+    <h3>1. Petunjuk Jalan Hidup</h3>
+    <p>Kitab Allah berfungsi sebagai petunjuk. Petunjuk ini tidak hanya menjawab persoalan ibadah, tetapi juga membimbing cara manusia berbicara, bekerja, belajar, berteman, memimpin, berdagang, dan menyelesaikan masalah.</p>
+
+    <h3>2. Pembeda antara Benar dan Salah</h3>
+    <p>Manusia sering berbeda pendapat tentang baik dan buruk. Kitab Allah menjadi furqan, yaitu pembeda antara kebenaran dan kebatilan. Dengan wahyu, manusia tidak menilai segala sesuatu hanya berdasarkan rasa suka, tren, atau kepentingan kelompok.</p>
+
+    <h3>3. Sumber Nasihat dan Peringatan</h3>
+    <p>Kitab Allah mengingatkan manusia tentang akibat ketaatan dan kemaksiatan. Peringatan itu bukan untuk menakut-nakuti tanpa arah, tetapi agar manusia sadar sebelum menyesal. Wahyu mengajak manusia kembali kepada Allah dengan taubat dan amal saleh.</p>
+
+    <h3>4. Rahmat bagi Kehidupan</h3>
+    <p>Petunjuk Allah membawa rahmat. Ketika manusia mengikuti wahyu, hidup menjadi lebih tertata: keluarga dijaga, hak orang lain dihormati, kezaliman dicegah, dan hati memiliki pegangan saat menghadapi ujian.</p>
+
+    <div class="grid-two">
+      <div class="mini-card">
+        <h4>Untuk hati</h4>
+        <p>Menenangkan, mengingatkan, dan menguatkan keyakinan kepada Allah.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Untuk akal</h4>
+        <p>Mengarahkan cara berpikir agar tidak mudah tertipu hawa nafsu.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Untuk ibadah</h4>
+        <p>Menjelaskan dasar ketaatan dan cara mendekat kepada Allah.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Untuk masyarakat</h4>
+        <p>Mengajarkan keadilan, amanah, tolong-menolong, dan tanggung jawab.</p>
+      </div>
+    </div>
+
+    <div class="dalil">
+      <div class="dalil-title">QS. Al-Ma'idah [5]: 48</div>
+      <div class="arabic">وَأَنْزَلْنَا إِلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِمَا بَيْنَ يَدَيْهِ مِنَ الْكِتَابِ وَمُهَيْمِنًا عَلَيْهِ ۖ فَاحْكُمْ بَيْنَهُمْ بِمَا أَنْزَلَ اللَّهُ وَلَا تَتَّبِعْ أَهْوَاءَهُمْ عَمَّا جَاءَكَ مِنَ الْحَقِّ</div>
+      <div class="translation"><strong>Makna ayat:</strong> Al-Qur'an diturunkan dengan kebenaran, membenarkan kitab-kitab sebelumnya, dan menjadi penjaga atasnya.</div>
+      <div class="meaning">Ayat ini menunjukkan kedudukan Al-Qur'an sebagai ukuran kebenaran bagi umat Islam setelah diutusnya Nabi Muhammad saw.</div>
+      <div class="ref">Rujukan: QS. Al-Ma'idah [5]: 48</div>
+    </div>
+  </section>
+
+  <section class="chapter" id="bab-v">
+    <div class="chapter-head">
+      <div>
+        <span class="chapter-ribbon">BAB V</span>
+        <h2><span class="chapter-number">5</span>Al-Qur'an sebagai Kitab Terakhir</h2>
+        <p class="lead">Al-Qur'an adalah wahyu Allah yang diturunkan kepada Nabi Muhammad saw. sebagai pedoman hidup umat manusia sampai akhir zaman.</p>
+      </div>
+      <figure class="illustration small-ill">
+        <svg viewBox="0 0 500 330" aria-label="Ilustrasi mushaf Al-Quran">
+          <rect width="500" height="330" fill="#fff8e7"/>
+          <path d="M0 239 C82 198 168 204 257 236 C351 269 424 254 500 211 L500 330 L0 330 Z" fill="#b9d5cf"/>
+          <path d="M116 233 C160 171 221 143 293 154 C265 214 202 250 116 233 Z" fill="#fffdf7" stroke="#12725f" stroke-width="9"/>
+          <path d="M207 236 C253 177 316 151 390 164 C357 219 294 252 207 236 Z" fill="#fff3c7" stroke="#445389" stroke-width="9"/>
+          <path d="M249 72 L275 119 L329 129 L290 166 L298 219 L249 194 L200 219 L208 166 L169 129 L223 119 Z" fill="#e5aa2f"/>
+          <path d="M223 145 H277 M233 167 H267" stroke="#fff8e3" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Al-Qur'an menjadi pedoman utama dalam iman dan amal.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Keistimewaan Al-Qur'an</h3>
+    <p>Al-Qur'an secara ringkas adalah kalam Allah yang diturunkan kepada Nabi Muhammad saw., dimulai dari Surah Al-Fatihah dan ditutup dengan Surah An-Nas. Al-Qur'an memiliki kedudukan istimewa: ia adalah kitab terakhir, mukjizat Nabi Muhammad saw. yang tetap ada, dan petunjuk bagi seluruh manusia sampai hari kiamat.</p>
+    <p>Materi HSI juga menekankan bahwa Al-Qur'an wajib diimani secara rinci. Artinya, seorang muslim tidak cukup berkata, "Saya percaya Al-Qur'an." Ia juga perlu menerima kabarnya, menjalankan nasihatnya, berhukum dengannya, dan kembali kepadanya ketika ada perselisihan.</p>
+
+    <div class="grid-two">
+      <div class="mini-card">
+        <h4>Kitab terakhir</h4>
+        <p>Setelah Al-Qur'an, tidak ada kitab suci baru yang Allah turunkan sebagai syariat untuk umat manusia.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Pedoman universal</h4>
+        <p>Ajaran Al-Qur'an berlaku bagi umat Nabi Muhammad saw. sampai akhir zaman.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Pembenar</h4>
+        <p>Al-Qur'an membenarkan wahyu Allah sebelumnya dalam bentuk aslinya.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Penjaga</h4>
+        <p>Al-Qur'an menjadi ukuran untuk menilai kebenaran ajaran dalam kehidupan seorang muslim.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Turun berangsur</h4>
+        <p>Al-Qur'an turun sesuai hikmah Allah agar mudah dihafal, dipahami, dan diamalkan.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Nama dan sifat mulia</h4>
+        <p>Al-Qur'an disebut juga Al-Kitab, Al-Furqan, Adz-Dzikr, petunjuk, rahmat, dan kitab yang mulia.</p>
+      </div>
+    </div>
+
+    <h3>Hak-hak Al-Qur'an</h3>
+    <ol>
+      <li><strong>Membacanya dengan adab.</strong> Membaca Al-Qur'an dengan hati hormat, menjaga kebersihan, dan berusaha memperbaiki bacaan.</li>
+      <li><strong>Memahami maknanya.</strong> Membaca terjemah, tafsir yang terpercaya, dan bertanya kepada guru yang berilmu.</li>
+      <li><strong>Mentadabburinya.</strong> Merenungkan pesan ayat, bukan hanya mengejar banyak bacaan tanpa menyentuh hati.</li>
+      <li><strong>Mengamalkannya.</strong> Petunjuk Al-Qur'an harus tampak dalam akhlak, ibadah, keputusan, dan pilihan hidup.</li>
+      <li><strong>Mengajarkannya.</strong> Ilmu Al-Qur'an yang dipahami perlu dibagikan dengan cara yang benar dan santun.</li>
+      <li><strong>Menjaganya dari pelecehan.</strong> Tidak menjadikan ayat sebagai bahan candaan, manipulasi, atau pembenaran hawa nafsu.</li>
+    </ol>
+
+    <div class="dalil">
+      <div class="dalil-title">QS. Al-Hijr [15]: 9</div>
+      <div class="arabic">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ</div>
+      <div class="translation"><strong>Makna ayat:</strong> Allah menegaskan bahwa Dialah yang menurunkan peringatan dan Dialah yang menjaganya.</div>
+      <div class="meaning">Ayat ini sering dijadikan dasar tentang penjagaan Allah terhadap Al-Qur'an.</div>
+      <div class="ref">Rujukan: QS. Al-Hijr [15]: 9</div>
+    </div>
+
+    <div class="dalil hadith">
+      <div class="dalil-title">Hadis tentang belajar Al-Qur'an</div>
+      <div class="arabic">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</div>
+      <div class="translation"><strong>Makna hadis:</strong> Sebaik-baik kalian adalah orang yang mempelajari Al-Qur'an dan mengajarkannya.</div>
+      <div class="meaning">Belajar Al-Qur'an adalah amal yang sangat mulia, apalagi jika ilmu itu kemudian diajarkan dengan adab.</div>
+      <div class="ref">Rujukan: Shahih al-Bukhari</div>
+    </div>
+
+    <div class="activity-box">
+      <strong>Proyek mini:</strong> Pilih satu surah pendek yang sudah kamu hafal. Tulis nama surah, arti nama surah, tiga pesan akhlak, dan satu tindakan nyata yang bisa kamu lakukan dari pesan tersebut.
+    </div>
+  </section>
+
+  <section class="chapter" id="bab-vi">
+    <div class="chapter-head">
+      <div>
+        <span class="chapter-ribbon">BAB VI</span>
+        <h2><span class="chapter-number">6</span>Sikap terhadap Kitab-kitab Allah</h2>
+        <p class="lead">Sikap yang benar terhadap kitab Allah harus menggabungkan keyakinan, adab, ilmu, dan pengamalan.</p>
+      </div>
+      <figure class="illustration small-ill">
+        <svg viewBox="0 0 500 330" aria-label="Ilustrasi sikap hormat kepada kitab">
+          <rect width="500" height="330" fill="#f4fbfb"/>
+          <path d="M0 238 C84 199 168 203 259 236 C350 269 426 252 500 212 L500 330 L0 330 Z" fill="#c9d999"/>
+          <rect x="150" y="118" width="200" height="118" rx="10" fill="#fffdf7" stroke="#12725f" stroke-width="8"/>
+          <path d="M250 118 V236" stroke="#e5aa2f" stroke-width="7"/>
+          <path d="M181 151 H229 M181 178 H219 M271 151 H319 M271 178 H309" stroke="#445389" stroke-width="7" stroke-linecap="round"/>
+          <path d="M102 247 C130 218 164 214 196 238 M304 238 C338 214 373 219 398 247" fill="none" stroke="#d96a55" stroke-width="12" stroke-linecap="round"/>
+          <path d="M250 74 L270 110 L310 119 L281 148 L286 188 L250 169 L214 188 L219 148 L190 119 L230 110 Z" fill="#e5aa2f"/>
+        </svg>
+        <figcaption class="caption">Memuliakan wahyu berarti menata hati, lisan, dan perbuatan.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Sikap Umum terhadap Semua Kitab Allah</h3>
+    <ol>
+      <li><strong>Meyakini bahwa semuanya berasal dari Allah.</strong> Kitab-kitab Allah bukan hasil karangan manusia.</li>
+      <li><strong>Menghormati para rasul penerimanya.</strong> Mengimani kitab Allah berarti juga menghormati rasul yang membawa wahyu.</li>
+      <li><strong>Tidak menghina kitab suci.</strong> Seorang muslim menjaga adab, termasuk ketika membahas agama lain.</li>
+      <li><strong>Mengetahui kedudukan Al-Qur'an.</strong> Untuk syariat sekarang, pedoman umat Islam adalah Al-Qur'an dan Sunnah Nabi Muhammad saw.</li>
+    </ol>
+
+    <h3>Menyikapi Kabar dari Kitab Terdahulu</h3>
+    <p>HSI menjelaskan bahwa kabar yang dinisbatkan kepada kitab terdahulu perlu disikapi dengan ilmu. Cara mudah memahaminya adalah begini.</p>
+    <div class="grid-three">
+      <div class="mini-card">
+        <h4>Dibenarkan Islam</h4>
+        <p>Jika Al-Qur'an atau Sunnah membenarkannya, maka kita membenarkannya.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Ditolak Islam</h4>
+        <p>Jika bertentangan dengan Al-Qur'an atau merendahkan Allah dan nabi, maka kita menolaknya.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Tidak jelas</h4>
+        <p>Jika tidak ada pembenaran atau penolakan dalam Islam, kita tidak memastikan benar atau salah.</p>
+      </div>
+    </div>
+
+    <div class="source-note">
+      <strong>Catatan ringan:</strong> Kita tidak mencari petunjuk agama dari kitab terdahulu yang sudah mengalami perubahan. Al-Qur'an sudah cukup sebagai petunjuk, rahmat, dan pelajaran bagi orang beriman. Orang yang membaca kitab terdahulu untuk kajian bantahan atau penelitian harus memiliki ilmu yang kuat dan bimbingan yang benar.
+    </div>
+
+    <div class="dalil">
+      <div class="dalil-title">QS. Al-'Ankabut [29]: 51</div>
+      <div class="arabic">أَوَلَمْ يَكْفِهِمْ أَنَّا أَنْزَلْنَا عَلَيْكَ الْكِتَابَ يُتْلَىٰ عَلَيْهِمْ ۚ إِنَّ فِي ذَٰلِكَ لَرَحْمَةً وَذِكْرَىٰ لِقَوْمٍ يُؤْمِنُونَ</div>
+      <div class="translation"><strong>Makna ayat:</strong> Allah mengingatkan bahwa Al-Qur'an yang dibacakan kepada manusia sudah cukup sebagai rahmat dan pelajaran bagi orang beriman.</div>
+      <div class="meaning">Ayat ini menguatkan bahwa seorang muslim tidak membutuhkan kitab lain untuk mencari petunjuk agama.</div>
+      <div class="ref">Rujukan: QS. Al-'Ankabut [29]: 51</div>
+    </div>
+
+    <h3>Sikap Khusus terhadap Al-Qur'an</h3>
+    <p>Karena Al-Qur'an adalah kitab terakhir, sikap seorang muslim terhadapnya harus lebih dari sekadar menyimpan mushaf. Al-Qur'an perlu dibaca, dipahami, direnungkan, dan diamalkan. Bacaan yang indah harus disertai akhlak yang indah.</p>
+
+    <div class="grid-two">
+      <div class="check-card">
+        <h4>Membaca</h4>
+        <p>Menjadikan tilawah sebagai kebiasaan, meskipun sedikit tetapi teratur.</p>
+      </div>
+      <div class="check-card">
+        <h4>Memahami</h4>
+        <p>Mempelajari arti ayat dan tafsir dasar dari sumber yang dapat dipercaya.</p>
+      </div>
+      <div class="check-card">
+        <h4>Merenungkan</h4>
+        <p>Bertanya kepada diri sendiri: pesan apa yang Allah ajarkan melalui ayat ini?</p>
+      </div>
+      <div class="check-card">
+        <h4>Mengamalkan</h4>
+        <p>Mengubah kebiasaan buruk menjadi kebaikan sesuai petunjuk Al-Qur'an.</p>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <strong>Kesalahan yang perlu dihindari:</strong> Menjadikan Al-Qur'an hanya sebagai pajangan, membaca tanpa berusaha memahami, memilih ayat hanya untuk membenarkan diri, atau berbicara tentang tafsir tanpa ilmu.
+    </div>
+
+    <h3>Adab Ketika Berbeda dengan Orang Lain</h3>
+    <p>Beriman kepada kitab Allah juga melatih adab dalam berdialog. Seorang muslim boleh menjelaskan keyakinannya dengan tegas, tetapi tetap menjaga lisan dari penghinaan. Kebenaran harus disampaikan dengan ilmu, kesantunan, dan niat mengajak kepada kebaikan.</p>
+  </section>
+
+  <section class="chapter" id="bab-vii">
+    <div class="chapter-head">
+      <div>
+        <span class="chapter-ribbon">BAB VII</span>
+        <h2><span class="chapter-number">7</span>Perilaku Sehari-hari</h2>
+        <p class="lead">Iman kepada kitab Allah harus terlihat dalam kebiasaan nyata: cara belajar, berbicara, memilih teman, dan menggunakan waktu.</p>
+      </div>
+      <figure class="illustration small-ill">
+        <svg viewBox="0 0 500 330" aria-label="Ilustrasi meja belajar dan mushaf">
+          <rect width="500" height="330" fill="#fff8e7"/>
+          <path d="M0 238 C82 198 167 204 258 236 C348 269 425 253 500 211 L500 330 L0 330 Z" fill="#b8d4c2"/>
+          <rect x="79" y="159" width="195" height="91" rx="10" fill="#fffdf7" stroke="#12725f" stroke-width="8"/>
+          <path d="M110 191 H234 M110 218 H214" stroke="#e5aa2f" stroke-width="8" stroke-linecap="round"/>
+          <rect x="306" y="119" width="98" height="132" rx="9" fill="#445389"/>
+          <path d="M326 151 H384 M326 178 H372 M326 205 H392" stroke="#fff8e3" stroke-width="8" stroke-linecap="round"/>
+          <path d="M70 276 H430" stroke="#d96a55" stroke-width="9" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Petunjuk Allah menjadi nyata ketika dipakai dalam rutinitas harian.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Di Rumah</h3>
+    <ol>
+      <li><strong>Membaca Al-Qur'an secara rutin.</strong> Pilih waktu yang realistis, misalnya setelah Magrib atau sebelum tidur.</li>
+      <li><strong>Menghormati orang tua.</strong> Al-Qur'an banyak mengajarkan birrul walidain, yaitu berbuat baik kepada orang tua.</li>
+      <li><strong>Menjaga ucapan.</strong> Hindari membentak, mengejek, dan berkata kasar karena wahyu mengajarkan lisan yang baik.</li>
+      <li><strong>Membantu pekerjaan rumah.</strong> Iman tampak dalam tanggung jawab, bukan hanya dalam ucapan.</li>
+    </ol>
+
+    <h3>Di Sekolah</h3>
+    <ol>
+      <li><strong>Jujur saat belajar dan ujian.</strong> Orang yang beriman kepada kitab Allah memahami bahwa Allah mengetahui perbuatannya.</li>
+      <li><strong>Menghargai guru.</strong> Ilmu harus dicari dengan adab, sabar, dan rendah hati.</li>
+      <li><strong>Tidak membully teman.</strong> Petunjuk Allah mengajarkan kehormatan manusia dan larangan menzalimi.</li>
+      <li><strong>Menggunakan ilmu untuk kebaikan.</strong> Prestasi tidak boleh melahirkan sombong.</li>
+    </ol>
+
+    <h3>Di Media Sosial</h3>
+    <p>Media sosial menjadi tempat ujian akhlak. Orang yang beriman kepada kitab Allah tidak mudah menyebar berita tanpa memeriksa, tidak menghina orang lain, tidak membuat konten maksiat, dan tidak menjadikan agama sebagai bahan candaan. Setiap unggahan harus dipikirkan: apakah ini mendekatkan kepada kebaikan atau justru membuka dosa?</p>
+
+    <div class="grid-two">
+      <div class="mini-card">
+        <h4>Sebelum mengirim</h4>
+        <p>Periksa kebenaran, manfaat, dan dampak ucapan.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Sebelum membalas</h4>
+        <p>Tahan emosi, pilih kata yang adil, dan jangan merendahkan.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Sebelum mengikuti tren</h4>
+        <p>Tanyakan apakah tren itu sesuai dengan adab Islam.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Sebelum membagikan ayat</h4>
+        <p>Pastikan penulisan, rujukan, dan maksudnya tidak dipelintir.</p>
+      </div>
+    </div>
+
+    <div class="activity-box">
+      <strong>Jurnal 7 hari:</strong> Selama satu minggu, tulis satu perilaku yang kamu lakukan karena mengingat petunjuk Al-Qur'an. Contoh: jujur saat ujian, meminta maaf, menahan komentar buruk, atau membantu orang tua.
+    </div>
+  </section>
+
+  <section class="chapter" id="bab-viii">
+    <div class="chapter-head">
+      <div>
+        <span class="chapter-ribbon">BAB VIII</span>
+        <h2><span class="chapter-number">8</span>Hikmah dan Evaluasi</h2>
+        <p class="lead">Mempelajari kitab Allah membuat hidup lebih terarah. Evaluasi membantu pembaca memastikan materi tidak hanya dibaca, tetapi dipahami.</p>
+      </div>
+      <figure class="illustration small-ill">
+        <svg viewBox="0 0 500 330" aria-label="Ilustrasi kompas dan catatan">
+          <rect width="500" height="330" fill="#f4fbfb"/>
+          <path d="M0 238 C83 198 169 203 258 236 C350 269 425 254 500 211 L500 330 L0 330 Z" fill="#c7d995"/>
+          <circle cx="190" cy="172" r="80" fill="#fffdf7" stroke="#12725f" stroke-width="8"/>
+          <path d="M190 98 L216 173 L190 246 L164 173 Z" fill="#e5aa2f"/>
+          <path d="M116 172 L190 149 L264 172 L190 195 Z" fill="#d96a55"/>
+          <rect x="286" y="111" width="112" height="143" rx="9" fill="#fffdf7" stroke="#445389" stroke-width="8"/>
+          <path d="M314 145 H370 M314 175 H382 M314 205 H360" stroke="#e5aa2f" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Wahyu menjadi kompas; evaluasi membantu arah itu dipahami.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Hikmah Beriman kepada Kitab-kitab Allah</h3>
+    <ol>
+      <li><strong>Hati lebih yakin.</strong> Manusia tahu bahwa Allah memberi petunjuk, bukan membiarkan manusia tersesat.</li>
+      <li><strong>Ibadah lebih terarah.</strong> Cara beribadah tidak dibuat-buat, tetapi mengikuti wahyu dan tuntunan rasul.</li>
+      <li><strong>Akhlak lebih terjaga.</strong> Kitab Allah mengingatkan manusia untuk jujur, sabar, amanah, dan adil.</li>
+      <li><strong>Ilmu lebih rendah hati.</strong> Manusia sadar bahwa akal membutuhkan bimbingan wahyu.</li>
+      <li><strong>Hidup lebih bertanggung jawab.</strong> Setiap perbuatan akan dipertanggungjawabkan di hadapan Allah.</li>
+      <li><strong>Lebih mencintai Allah.</strong> Kita sadar bahwa Allah menurunkan petunjuk karena kasih sayang-Nya kepada manusia.</li>
+      <li><strong>Lebih menghormati Al-Qur'an.</strong> Iman yang benar membuat kita ingin membaca, memahami, menghafal, dan mengamalkannya.</li>
+    </ol>
+
+    <h3>Penyimpangan yang Harus Dijauhi</h3>
+    <p>HSI mengingatkan bahwa iman kepada kitab Allah juga punya batas yang harus dijaga. Beberapa sikap berikut tidak boleh diremehkan.</p>
+    <div class="grid-two">
+      <div class="warning-box">
+        <strong>Mengingkari wahyu:</strong> menolak kitab Allah, ayat Al-Qur'an, atau satu bagian yang jelas datang dari Allah.
+      </div>
+      <div class="warning-box">
+        <strong>Mendustakan kabar sahih:</strong> menolak berita Al-Qur'an tentang Allah, nabi, hari akhir, surga, neraka, dan perkara gaib lainnya.
+      </div>
+      <div class="warning-box">
+        <strong>Mengolok-olok ayat:</strong> menjadikan ayat Allah sebagai bahan candaan, ejekan, atau konten yang merendahkan.
+      </div>
+      <div class="warning-box">
+        <strong>Meninggalkan Al-Qur'an:</strong> tidak mau mendengar, membaca, memahami, mengamalkan, atau berhukum dengannya.
+      </div>
+    </div>
+
+    <div class="dalil">
+      <div class="dalil-title">QS. Al-Furqan [25]: 30</div>
+      <div class="arabic">وَقَالَ الرَّسُولُ يَا رَبِّ إِنَّ قَوْمِي اتَّخَذُوا هَٰذَا الْقُرْآنَ مَهْجُورًا</div>
+      <div class="translation"><strong>Makna ayat:</strong> Rasul berkata bahwa kaumnya telah menjadikan Al-Qur'an sebagai sesuatu yang diabaikan.</div>
+      <div class="meaning">Ayat ini menjadi pengingat agar Al-Qur'an tidak hanya ada di rak, tetapi hadir dalam bacaan, pemahaman, dan amal.</div>
+      <div class="ref">Rujukan: QS. Al-Furqan [25]: 30</div>
+    </div>
+
+    <h3>Rangkuman Materi</h3>
+    <div class="summary-box">
+      <p><strong>Ringkasnya:</strong> Beriman kepada kitab-kitab Allah berarti meyakini bahwa Allah menurunkan wahyu kepada para rasul. Caranya: meyakini kitab itu benar-benar dari Allah, mengimani nama kitab yang diketahui, membenarkan kabar yang sahih, serta ridha dan tunduk kepada hukum Allah. Kitab yang wajib diketahui adalah Taurat kepada Musa, Zabur kepada Daud, Injil kepada Isa, dan Al-Qur'an kepada Nabi Muhammad saw. Kita juga mengenal suhuf Nabi Ibrahim dan Nabi Musa. Umat Islam mengimani semua wahyu Allah yang asli, dan menjadikan Al-Qur'an sebagai pedoman hidup terakhir.</p>
+    </div>
+
+    <h3>Latihan Pemahaman</h3>
+    <div class="grid-two">
+      <div class="mini-card">
+        <h4>Pertanyaan 1</h4>
+        <p>Apa arti beriman kepada kitab-kitab Allah SWT?</p>
+      </div>
+      <div class="mini-card">
+        <h4>Pertanyaan 2</h4>
+        <p>Sebutkan empat kitab Allah beserta rasul penerimanya.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Pertanyaan 3</h4>
+        <p>Apa perbedaan kitab dan suhuf?</p>
+      </div>
+      <div class="mini-card">
+        <h4>Pertanyaan 4</h4>
+        <p>Mengapa Al-Qur'an disebut kitab terakhir?</p>
+      </div>
+      <div class="mini-card">
+        <h4>Pertanyaan 5</h4>
+        <p>Berikan tiga contoh perilaku yang mencerminkan iman kepada Al-Qur'an.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Pertanyaan 6</h4>
+        <p>Mengapa seorang muslim harus berhati-hati saat membagikan ayat di media sosial?</p>
+      </div>
+    </div>
+
+    <h3>Tugas Proyek</h3>
+    <div class="activity-box">
+      <strong>Peta konsep:</strong> Buat peta konsep berjudul "Kitab-kitab Allah". Isi peta dengan pengertian, dalil, nama kitab, rasul penerima, fungsi kitab, dan perilaku sehari-hari.
+    </div>
+    <div class="activity-box">
+      <strong>Presentasi kelompok:</strong> Setiap kelompok memilih satu tema: Taurat, Zabur, Injil, Al-Qur'an, atau adab terhadap Al-Qur'an. Sampaikan dalam 5 menit dengan satu rujukan ayat.
+    </div>
+  </section>
+
+  <section class="section-page" id="penutup">
+    <span class="label">Akhir Materi</span>
+    <h2>Penutup</h2>
+    <div class="divider"></div>
+    <figure class="illustration wide-ill">
+      <svg viewBox="0 0 900 330" aria-label="Ilustrasi jalan cahaya dan kitab">
+        <rect width="900" height="330" fill="#fff6df"/>
+        <circle cx="738" cy="78" r="48" fill="#f2ca63"/>
+        <path d="M0 238 C150 199 280 204 429 240 C592 279 735 267 900 211 L900 330 L0 330 Z" fill="#b9d5cf"/>
+        <path d="M120 278 C226 221 327 193 432 198 C546 204 647 239 776 278" fill="none" stroke="#12725f" stroke-width="15" stroke-linecap="round"/>
+        <path d="M360 260 C420 184 505 148 617 158 C574 228 490 270 360 260 Z" fill="#fffdf7" stroke="#445389" stroke-width="9"/>
+        <path d="M470 260 C530 194 612 167 718 182 C668 244 590 274 470 260 Z" fill="#fff3c7" stroke="#d96a55" stroke-width="9"/>
+        <path d="M497 82 L527 137 L588 147 L544 190 L554 252 L497 222 L440 252 L450 190 L406 147 L467 137 Z" fill="#e5aa2f"/>
+        <path d="M160 118 C211 86 260 88 303 119" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/>
+      </svg>
+      <figcaption class="caption">Beriman kepada kitab Allah berarti berjalan bersama petunjuk, bukan sekadar mengagumi kitab dari jauh.</figcaption>
+    </figure>
+
+    <p>Allah SWT menurunkan kitab-kitab-Nya sebagai kasih sayang dan petunjuk bagi manusia. Dengan wahyu, manusia belajar mengenal Allah, membangun ibadah yang benar, menjaga akhlak, dan menjalani hidup dengan tanggung jawab. Karena itu, iman kepada kitab-kitab Allah harus dijaga dalam hati dan dibuktikan dalam perbuatan.</p>
+    <p>Seorang muslim mengimani kitab-kitab Allah yang diturunkan kepada para rasul. Ia menghormati Taurat, Zabur, Injil, dan wahyu Allah lainnya dalam bentuk aslinya. Ia juga menyadari bahwa Al-Qur'an adalah kitab terakhir yang menjadi pedoman hidup umat Islam sampai akhir zaman.</p>
+    <p>Semoga materi ini membuat pembaca semakin dekat dengan Al-Qur'an: rajin membacanya, berusaha memahami maknanya, memperbaiki akhlak dengannya, dan menjadikannya petunjuk dalam belajar, berteman, berkeluarga, serta bermasyarakat.</p>
+
+    <div class="dalil">
+      <div class="dalil-title">QS. Al-Baqarah [2]: 2</div>
+      <div class="arabic">ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِلْمُتَّقِينَ</div>
+      <div class="translation"><strong>Makna ayat:</strong> Al-Qur'an adalah kitab yang tidak ada keraguan di dalamnya dan menjadi petunjuk bagi orang-orang yang bertakwa.</div>
+      <div class="meaning">Ayat ini menutup materi dengan pesan utama: petunjuk Allah akan menjadi cahaya bagi orang yang ingin hidup dalam ketakwaan.</div>
+      <div class="ref">Rujukan: QS. Al-Baqarah [2]: 2</div>
+    </div>
+  </section>
+
+  <section class="section-page" id="glosarium">
+    <span class="label">Istilah Penting</span>
+    <h2>Glosarium</h2>
+    <div class="divider"></div>
+    <div class="grid-two">
+      <div class="term-card">
+        <h4>Akidah</h4>
+        <p>Keyakinan dasar dalam Islam yang harus diyakini dengan benar.</p>
+      </div>
+      <div class="term-card">
+        <h4>Al-Qur'an</h4>
+        <p>Kitab Allah yang diturunkan kepada Nabi Muhammad saw. sebagai pedoman terakhir.</p>
+      </div>
+      <div class="term-card">
+        <h4>Furqan</h4>
+        <p>Pembeda antara kebenaran dan kebatilan.</p>
+      </div>
+      <div class="term-card">
+        <h4>Injil</h4>
+        <p>Kitab yang Allah wahyukan kepada Nabi Isa a.s.</p>
+      </div>
+      <div class="term-card">
+        <h4>Kitab</h4>
+        <p>Wahyu Allah yang diturunkan kepada rasul sebagai petunjuk bagi umat.</p>
+      </div>
+      <div class="term-card">
+        <h4>Rukun iman</h4>
+        <p>Pokok-pokok keimanan yang wajib diyakini oleh setiap muslim.</p>
+      </div>
+      <div class="term-card">
+        <h4>Suhuf</h4>
+        <p>Lembaran wahyu yang Allah berikan kepada sebagian nabi.</p>
+      </div>
+      <div class="term-card">
+        <h4>Taurat</h4>
+        <p>Kitab yang Allah wahyukan kepada Nabi Musa a.s.</p>
+      </div>
+      <div class="term-card">
+        <h4>Wahyu</h4>
+        <p>Petunjuk Allah yang disampaikan kepada nabi dan rasul.</p>
+      </div>
+      <div class="term-card">
+        <h4>Zabur</h4>
+        <p>Kitab yang Allah berikan kepada Nabi Daud a.s.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-page" id="daftar-pustaka">
+    <span class="label">Rujukan</span>
+    <h2>Daftar Pustaka</h2>
+    <div class="divider"></div>
+    <figure class="illustration wide-ill">
+      <svg viewBox="0 0 900 330" aria-label="Ilustrasi rak rujukan">
+        <rect width="900" height="330" fill="#f8f1df"/>
+        <path d="M0 240 C139 199 282 207 434 241 C597 278 738 267 900 212 L900 330 L0 330 Z" fill="#c2d799"/>
+        <rect x="110" y="92" width="420" height="180" rx="10" fill="#765238"/>
+        <rect x="134" y="118" width="372" height="45" fill="#fff1c9"/>
+        <rect x="134" y="188" width="372" height="45" fill="#fff1c9"/>
+        <rect x="158" y="106" width="31" height="66" fill="#12725f"/>
+        <rect x="203" y="106" width="29" height="66" fill="#d96a55"/>
+        <rect x="247" y="106" width="42" height="66" fill="#e5aa2f"/>
+        <rect x="318" y="176" width="34" height="67" fill="#445389"/>
+        <rect x="366" y="176" width="29" height="67" fill="#12725f"/>
+        <rect x="410" y="176" width="42" height="67" fill="#d96a55"/>
+        <path d="M626 244 C626 205 658 182 700 182 H782 C824 182 856 205 856 244 C856 282 824 304 782 304 H700 C658 304 626 282 626 244 Z" fill="#fffdf7" stroke="#12725f" stroke-width="8"/>
+        <path d="M699 182 C724 205 725 282 699 304 M783 182 C759 205 758 282 783 304" fill="none" stroke="#e5aa2f" stroke-width="7"/>
+        <path d="M654 244 H828" stroke="#445389" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+      <figcaption class="caption">Rujukan menjaga pembelajaran tetap terhubung dengan sumber ajaran.</figcaption>
+    </figure>
+
+    <ol class="bibliography">
+      <li>Al-Qur'an al-Karim: QS. Al-Baqarah [2]: 2, 136, 185, 285; QS. Ali 'Imran [3]: 3-4; QS. An-Nisa [4]: 136, 163; QS. Al-Ma'idah [5]: 44, 46, 48; QS. Al-Hijr [15]: 9; QS. Al-Isra [17]: 55; QS. Al-A'la [87]: 18-19.</li>
+      <li>Muslim bin al-Hajjaj. <em>Shahih Muslim</em>. Rujukan hadis Jibril tentang rukun iman.</li>
+      <li>Ibnu Katsir, Ismail bin Umar. <em>Tafsir al-Qur'an al-'Azhim</em>, penjelasan ayat-ayat tentang kitab-kitab Allah.</li>
+      <li>As-Sa'di, Abdurrahman bin Nashir. <em>Taysir al-Karim ar-Rahman fi Tafsir Kalam al-Mannan</em>, ringkasan makna ayat-ayat akidah.</li>
+      <li>Kementerian Agama Republik Indonesia. <em>Al-Qur'an dan Terjemahannya</em>, rujukan terjemah dan penomoran ayat.</li>
+      <li>Halaqah Silsilah Ilmiyyah. <em>HSI 7 Beriman Kepada Kitab-Kitab Allah</em>. PDF materi halaqah, digunakan sebagai sumber penguatan materi.</li>
+    </ol>
+
+    <div class="footer-note">
+      Naskah ini disusun sebagai bahan pembelajaran. Untuk kajian yang lebih mendalam, bacalah mushaf Al-Qur'an, kitab tafsir yang terpercaya, dan mintalah bimbingan guru yang berilmu.
+    </div>
+  </section>
+</body>
+</html>
