@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kisah Nabi Musa a.s.: Perjalanan Iman, Keberanian, dan Kepemimpinan</title>
+<meta name="description" content="Buku digital interaktif single file tentang kisah Nabi Musa a.s. dari kelahiran sampai pelajaran hidup.">
+<meta name="theme-color" content="#0f4c5d">
+<link rel="preload" as="font" type="font/otf" crossorigin href="https://cdn.jsdelivr.net/gh/raflyfahrezi/KFGQPC-Uthmanic-Script-HAFS-Regular@master/arabic.otf">
+<style>
+@font-face{font-family:"KFGQPC HAFS Uthmanic Script";src:url("https://cdn.jsdelivr.net/gh/raflyfahrezi/KFGQPC-Uthmanic-Script-HAFS-Regular@master/arabic.otf") format("opentype");font-display:swap;}
+:root{--bg:#f6efe0;--bg2:#ead9b4;--panel:#fffaef;--panel2:#f6e6c4;--text:#1a2b2f;--muted:#5a6c72;--emerald:#0a5c54;--emerald2:#10897a;--gold:#d4a13a;--gold2:#f1c66b;--rose:#b94a3b;--plum:#5a2a4d;--border:rgba(10,92,84,.22);--shadow:0 22px 50px rgba(10,40,40,.16);--ring:0 0 0 3px rgba(212,161,58,.35);--gradient-hero:linear-gradient(135deg,#0a5c54 0%,#10897a 45%,#d4a13a 100%);--gradient-gold:linear-gradient(135deg,#d4a13a,#f1c66b);--gradient-panel:linear-gradient(160deg,#fffaef 0%,#f6e6c4 100%)}
+body.dark{--bg:#061a1f;--bg2:#0b2d33;--panel:#0f3a3f;--panel2:#164a4d;--text:#f4ead0;--muted:#b9c8c8;--emerald:#1aa896;--emerald2:#34c9b3;--gold:#f1c66b;--gold2:#ffd98a;--border:rgba(241,198,107,.18);--shadow:0 22px 50px rgba(0,0,0,.5);--ring:0 0 0 3px rgba(241,198,107,.35);--gradient-hero:linear-gradient(135deg,#0f3a3f 0%,#1aa896 45%,#f1c66b 100%);--gradient-gold:linear-gradient(135deg,#f1c66b,#ffd98a);--gradient-panel:linear-gradient(160deg,#0f3a3f 0%,#164a4d 100%)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Comic Sans MS","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 8% 0%,rgba(10,92,84,.22),transparent 42%),radial-gradient(circle at 92% 6%,rgba(212,161,58,.25),transparent 40%),radial-gradient(circle at 50% 100%,rgba(185,74,59,.14),transparent 55%),linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);letter-spacing:0;overflow-x:hidden}
+a{color:inherit}img{max-width:100%;display:block}button,input,textarea{font:inherit}button{cursor:pointer}::selection{background:rgba(201,143,45,.22)}
+.app{min-height:100vh;display:grid;grid-template-columns:320px minmax(0,1fr)}
+.sidebar{position:sticky;top:0;height:100vh;padding:20px;border-right:1px solid var(--border);background:linear-gradient(180deg,var(--panel),var(--panel2));overflow:auto;backdrop-filter:blur(14px)}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}.brand-mark{width:48px;height:48px;border-radius:14px;background:var(--gradient-hero);color:#fff;display:grid;place-items:center;box-shadow:var(--shadow);font-weight:700}.brand h1{margin:0;font-size:1.1rem;line-height:1.2}.brand p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.panel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}
+.side-group{padding:16px;margin-bottom:14px}.side-title{margin:0 0 10px;font-size:.94rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.toc{display:grid;gap:6px}.toc a{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:12px;text-decoration:none;border:1px solid transparent;background:transparent;color:var(--text)}.toc a:hover,.toc a.active{border-color:rgba(15,76,93,.28);background:rgba(15,76,93,.10)}.toc small{color:var(--muted)}
+.search{display:grid;gap:10px}.search input,.note-box textarea{width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:var(--panel);color:var(--text);outline:none}.search input:focus,.note-box textarea:focus{box-shadow:var(--ring);border-color:rgba(15,76,93,.45)}
+.search-results{font-size:.94rem;color:var(--muted);min-height:18px}.badge-row{display:flex;flex-wrap:wrap;gap:8px}.badge{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(15,76,93,.10);color:var(--text);font-size:.84rem}
+.note-box textarea{min-height:124px;resize:vertical}.mini-actions{display:flex;gap:10px;flex-wrap:wrap}.mini-actions button,.top-btn,.tag,.primary-btn,.ghost-btn,.quiz-opt,.accordion-btn{border:1px solid var(--border);border-radius:14px;padding:11px 14px;background:var(--panel);color:var(--text);transition:transform .2s ease,background .2s ease,border-color .2s ease,opacity .2s ease}.mini-actions button:hover,.top-btn:hover,.tag:hover,.primary-btn:hover,.ghost-btn:hover,.quiz-opt:hover,.accordion-btn:hover{transform:translateY(-1px);border-color:rgba(201,143,45,.5)}
+.primary-btn{background:linear-gradient(135deg,var(--emerald),#0a3744);color:#fff;border-color:transparent}.ghost-btn,.top-btn{background:transparent}.top-btn[aria-pressed="true"],.tag.active{background:rgba(201,143,45,.18);border-color:rgba(201,143,45,.5)}
+.progress-wrap{padding:16px;margin-bottom:14px}.progress-label{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.92rem;color:var(--muted)}.bar{height:10px;background:rgba(24,37,47,.10);border-radius:999px;overflow:hidden;margin-top:10px}.bar > span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--emerald),var(--gold));border-radius:999px;transition:width .2s ease}
+.main{min-width:0}.topbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--border);background:rgba(251,246,236,.85);backdrop-filter:blur(18px)}body.dark .topbar{background:rgba(10,30,38,.88)}.topbar .meta{display:flex;flex-direction:column}.topbar .meta strong{font-size:1.02rem}.topbar .meta span{color:var(--muted);font-size:.9rem}.top-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.top-btn{padding:10px 13px}
+.content{padding:20px;display:grid;gap:18px}.chapter{position:relative;padding:26px;border:1px solid var(--border);background:linear-gradient(180deg,var(--panel),var(--panel2));border-radius:22px;box-shadow:var(--shadow);scroll-margin-top:100px;overflow:hidden}.chapter::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--gradient-hero);opacity:.95}.chapter h2{margin:0 0 10px;font-size:1.45rem}.subtitle,.lead,.small,.muted{color:var(--muted)}.hero{display:grid;grid-template-columns:1.15fr .95fr;gap:20px;align-items:stretch;min-height:520px}.hero h1{margin:.1rem 0 .6rem;font-size:clamp(2.3rem,5vw,4.4rem);line-height:.98}.hero .subtitle{font-size:1.05rem;line-height:1.7;max-width:56ch}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}.hero-meta{display:flex;gap:10px;flex-wrap:wrap}.hero-meta span{padding:8px 12px;border-radius:999px;background:rgba(15,76,93,.10);border:1px solid var(--border);font-size:.86rem}
+.hero-visual{position:relative;min-height:100%;border-radius:22px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(160deg,#0f4c5d 0%,#1c7784 45%,#c98f2d 100%);display:grid;place-items:center;color:#fffdf6}
+.hero-visual svg{width:78%;height:auto;filter:drop-shadow(0 14px 28px rgba(0,0,0,.25))}
+.hero-card{position:absolute;left:16px;right:16px;padding:12px 16px;border-radius:16px;background:rgba(255,253,246,.92);backdrop-filter:blur(12px);color:#1d2a33;box-shadow:var(--shadow);font-size:.9rem}body.dark .hero-card{background:rgba(18,49,62,.92);color:var(--text)}.float-one{bottom:18px}.float-two{top:18px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card,.infobox,.topic-box,.quiz-panel,.result-box,.h-card,.timeline-item{padding:18px;border-radius:18px;border:1px solid var(--border);background:rgba(255,253,246,.74);backdrop-filter:blur(10px)}body.dark .card,body.dark .infobox,body.dark .topic-box,body.dark .quiz-panel,body.dark .result-box,body.dark .h-card,body.dark .timeline-item{background:rgba(18,49,62,.78)}.card h3,.infobox h3,.topic-box h3,.quiz-panel h3,.h-card h3{margin-top:0;margin-bottom:10px}.quote-box{padding:18px 20px;border-left:6px solid var(--gold);background:linear-gradient(135deg,rgba(212,161,58,.18),rgba(241,198,107,.08));border-radius:16px;box-shadow:0 8px 22px rgba(212,161,58,.12)}.info-list{display:grid;gap:10px}.info-row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--border);padding-bottom:8px}.info-row strong{text-align:right}.kpi{padding:18px;border-radius:18px;background:linear-gradient(140deg,rgba(10,92,84,.18),rgba(212,161,58,.22));border:1px solid var(--border);color:var(--text)}.kpi strong{display:block;font-size:1.8rem}.kpi span{color:var(--muted)}
+.button-row,.quiz-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.tag{padding:8px 12px;border-radius:999px;font-size:.9rem}
+.arabic{font-family:"KFGQPC HAFS Uthmanic Script","Amiri Quran","Traditional Arabic",serif;direction:rtl;text-align:right;font-size:1.9rem;line-height:2.4;letter-spacing:0;word-spacing:.03em;color:var(--text);font-feature-settings:"liga","calt","rlig","ccmp";text-rendering:optimizeLegibility}
+.dalil{padding:18px;border-radius:18px;border:1px solid var(--border);background:linear-gradient(140deg,rgba(10,92,84,.10),rgba(212,161,58,.16));margin-top:12px}.dalil .arabic{margin-bottom:10px}.dalil .ref{margin-top:8px;font-size:.88rem;color:var(--muted);font-weight:600}
+.accordion{display:grid;gap:10px}.accordion-item{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:rgba(255,253,246,.72)}body.dark .accordion-item{background:rgba(18,49,62,.78)}.accordion-btn{width:100%;display:flex;justify-content:space-between;align-items:center;border:0;background:transparent;text-align:left;border-radius:0;font-weight:600}.accordion-content{display:none;padding:0 16px 16px;color:var(--muted)}.accordion-item.open .accordion-content{display:block}
+.timeline{display:grid;gap:12px}.timeline-item{position:relative;padding-left:22px}.timeline-item::before{content:"";position:absolute;left:8px;top:18px;bottom:-14px;width:2px;background:rgba(15,76,93,.22)}.timeline-item:last-child::before{display:none}.timeline-item strong{display:block;margin-bottom:4px}.timeline-item.active{border-color:rgba(201,143,45,.55);box-shadow:var(--ring)}
+.quiz-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:16px}.quiz-q{font-size:1.08rem;line-height:1.65;margin:10px 0 14px}.quiz-options{display:grid;gap:10px}.quiz-opt{width:100%;text-align:left;padding:12px 14px;border-radius:14px}.quiz-opt.selected{background:rgba(15,76,93,.14);border-color:rgba(15,76,93,.45)}.quiz-opt.correct{background:rgba(35,161,88,.18);border-color:rgba(35,161,88,.55)}.quiz-opt.wrong{background:rgba(209,69,69,.14);border-color:rgba(209,69,69,.5)}.score{font-size:2.5rem;font-weight:700;color:var(--emerald)}.result-box{color:var(--muted)}
+.term{display:inline-flex;align-items:center;gap:4px;padding:2px 6px;border-radius:8px;background:rgba(201,143,45,.14);border:1px dashed rgba(201,143,45,.5);cursor:pointer}.tooltip{position:fixed;z-index:40;max-width:320px;padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:var(--panel);box-shadow:var(--shadow);display:none}.tooltip strong{display:block;margin-bottom:4px}
+.sr-only{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.reading-progress{position:fixed;left:0;top:0;height:4px;width:100%;z-index:60;background:rgba(0,0,0,.05)}.reading-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--emerald),var(--gold))}
+.scrim{display:none}.mobile-only{display:none}.divider{margin:18px 0;border-top:1px solid var(--border)}.footer-note{font-size:.92rem;color:var(--muted)}
+.map-illus{aspect-ratio:16/9;border-radius:18px;border:1px solid var(--border);background:linear-gradient(135deg,#f7eed8,#e9d6b0);position:relative;overflow:hidden;display:grid;place-items:center}
+body.dark .map-illus{background:linear-gradient(135deg,#173a48,#0f4c5d)}
+.map-illus svg{width:92%;height:92%}
+.glos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.glos-item{padding:12px 14px;border:1px solid var(--border);border-radius:14px;background:rgba(255,253,246,.7)}body.dark .glos-item{background:rgba(18,49,62,.7)}
+.glos-item strong{display:block;color:var(--emerald);margin-bottom:4px}
+ul{padding-left:20px}li{margin:4px 0}
+@media (max-width:1180px){.app{grid-template-columns:1fr}.sidebar{position:fixed;left:0;top:0;bottom:0;width:min(92vw,340px);transform:translateX(-102%);transition:transform .25s ease;z-index:50;box-shadow:var(--shadow)}body.sidebar-open .sidebar{transform:translateX(0)}.scrim{position:fixed;inset:0;background:rgba(0,0,0,.32);z-index:40;display:none}body.sidebar-open .scrim{display:block}.hero,.quiz-layout,.grid-2,.grid-3{grid-template-columns:1fr}.mobile-only{display:inline-flex}}
+@media (max-width:720px){.topbar,.content{padding-left:14px;padding-right:14px}.chapter{padding:18px}.hero{min-height:auto}.hero-visual{min-height:280px}.top-actions{gap:8px}.top-btn,.primary-btn,.ghost-btn{padding:9px 11px}.quiz-opt{padding:11px 12px}}
+
+#bab2 .timeline-item::before{display:none!important}
+#bab2 .card,#bab2 .quote-box,#bab2 .timeline-item{padding:20px 22px}
+#bab2 .timeline-item{padding-left:18px}
+body{line-height:1.9}
+p,li,.card p,.lead,.quote-box,.timeline-item{line-height:1.9}
+</style>
+</head>
+<body>
+<div class="reading-progress"><span id="readingBar"></span></div>
+<div class="scrim" id="scrim"></div>
+<div class="tooltip" id="tooltip" role="dialog" aria-live="polite"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-mark">مُو</div>
+    <div><h1>Kisah Nabi Musa a.s.</h1><p>ebook interaktif premium</p></div>
+  </div>
+  <div class="panel side-group progress-wrap">
+    <div class="progress-label"><span>Progress membaca</span><strong id="progressText">0%</strong></div>
+    <div class="bar"><span id="progressFill"></span></div>
+  </div>
+  <div class="panel side-group search">
+    <p class="side-title">Pencarian kata</p>
+    <input id="searchBox" type="search" placeholder="Cari: Fir'aun, Madyan, Khidir, Qarun...">
+    <div class="search-results" id="searchResults">Ketik kata untuk menelusuri isi buku.</div>
+  </div>
+  <div class="panel side-group">
+    <p class="side-title">Daftar Isi</p>
+    <nav class="toc" id="toc">
+      <a href="#bab1" data-target="bab1"><span>Bab 1</span><small>Sampul</small></a>
+      <a href="#bab2" data-target="bab2"><span>Bab 2</span><small>Pengantar</small></a>
+      <a href="#bab3" data-target="bab3"><span>Bab 3</span><small>Profil & Identitas</small></a>
+      <a href="#bab4" data-target="bab4"><span>Bab 4</span><small>Latar & Sumber</small></a>
+      <a href="#bab5" data-target="bab5"><span>Bab 5</span><small>Dalil Hadits</small></a>
+      <a href="#bab6" data-target="bab6"><span>Bab 6</span><small>Kelahiran & Nil</small></a>
+      <a href="#bab7" data-target="bab7"><span>Bab 7</span><small>Madyan & Hijrah</small></a>
+      <a href="#bab8" data-target="bab8"><span>Bab 8</span><small>Wahyu di Thuwa</small></a>
+      <a href="#bab9" data-target="bab9"><span>Bab 9</span><small>Dakwah & Laut Terbelah</small></a>
+      <a href="#bab10" data-target="bab10"><span>Bab 10</span><small>Membimbing Bani Israil</small></a>
+      <a href="#bab11" data-target="bab11"><span>Bab 11</span><small>Khidir & Qarun</small></a>
+      <a href="#bab12" data-target="bab12"><span>Bab 12</span><small>Hikmah & Akhlak</small></a>
+      <a href="#bab13" data-target="bab13"><span>Bab 13</span><small>Penerapan Harian</small></a>
+      <a href="#bab14" data-target="bab14"><span>Bab 14</span><small>Kuis 15 Soal</small></a>
+      <a href="#bab15" data-target="bab15"><span>Bab 15</span><small>Penutup & Pustaka</small></a>
+    </nav>
+  </div>
+  <div class="panel side-group note-box">
+    <p class="side-title">Catatan pribadi</p>
+    <textarea id="noteField" placeholder="Tulis catatan, akan tersimpan otomatis."></textarea>
+    <div class="mini-actions" style="margin-top:10px;">
+      <button class="ghost-btn" id="clearNote">Hapus catatan</button>
+      <button class="primary-btn" id="saveBookmark">Bookmark bab</button>
+    </div>
+    <div class="footer-note" id="noteStatus">Catatan tersimpan di perangkat ini.</div>
+  </div>
+  <div class="panel side-group">
+    <p class="side-title">Ringkas</p>
+    <div class="badge-row">
+      <span class="badge">Ulul Azmi</span>
+      <span class="badge">15 Bab</span>
+      <span class="badge">Berbasis Al-Qur'an & Hadits</span>
+    </div>
+  </div>
+</aside>
+<div class="main">
+  <header class="topbar">
+    <div class="meta"><strong>Kisah Nabi Musa a.s.</strong><span>Perjalanan iman, keberanian, doa, ilmu, dan kepemimpinan</span></div>
+    <div class="top-actions">
+      <button class="top-btn mobile-only" id="sidebarToggle" aria-label="Buka daftar isi">☰ Daftar Isi</button>
+      <button class="top-btn" id="jumpBookmark" aria-label="Pergi ke bookmark">⭢ Bookmark</button>
+      <button class="top-btn" id="themeToggle" aria-pressed="false" aria-label="Mode gelap">◐ Mode</button>
+    </div>
+  </header>
+  <main class="content">
+
+    <!-- BAB 1 - HERO -->
+    <section class="chapter hero" id="bab1">
+      <div>
+        <div class="small">Buku digital interaktif berbasis HTML tunggal</div>
+        <h1>Kisah Nabi Musa a.s.</h1>
+        <p class="subtitle">Yuk, kita ikuti petualangan seru Nabi Musa — dari bayi yang dihanyutkan di Sungai Nil sampai laut yang terbelah karena izin Allah!</p>
+        <div class="hero-actions">
+          <button class="primary-btn" id="startReading">Mulai Membaca</button>
+          <button class="ghost-btn" id="openBookmarkList">Lihat Bookmark</button>
+        </div>
+        <div class="hero-meta">
+          <span>Berbasis Al-Qur'an</span>
+          <span>Dalil hadits sahih</span>
+          <span>Ilustrasi simbolik</span>
+          <span>Materi Akidah & Akhlak</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#fff6dc"/><stop offset="1" stop-color="#f0c569"/>
+            </linearGradient>
+            <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#1c7784"/><stop offset="1" stop-color="#0f4c5d"/>
+            </linearGradient>
+          </defs>
+          <circle cx="320" cy="90" r="42" fill="url(#sky)" opacity=".85"/>
+          <path d="M0 260 Q100 220 200 250 T400 240 L400 400 L0 400 Z" fill="url(#sea)"/>
+          <path d="M0 270 L180 270 L200 250 L220 270 L400 270 L400 290 L0 290 Z" fill="#fffdf6" opacity=".18"/>
+          <polygon points="60,300 140,200 220,300" fill="#a45f35" opacity=".9"/>
+          <polygon points="190,310 260,220 330,310" fill="#8c4f67" opacity=".9"/>
+          <rect x="180" y="160" width="18" height="120" fill="#c98f2d" transform="rotate(-12 189 220)"/>
+          <text x="200" y="370" text-anchor="middle" font-family="serif" font-size="32" fill="#fffdf6" opacity=".9">مُوسَىٰ</text>
+        </svg>
+        <div class="hero-card float-two"><strong>Panduan belajar</strong><br>Setiap bab seperti cerita bergambar, dibaca pelan-pelan ya.</div>
+        <div class="hero-card float-one"><strong>Fokus utama</strong><br>Beriman kepada Allah, berani, suka berdoa, dan menolong sesama.</div>
+      </div>
+    </section>
+
+    <!-- BAB 2 - PENGANTAR -->
+    <section class="chapter" id="bab2">
+      <h2>Bab 2 — Pengantar</h2>
+      <p class="lead">Nabi Musa adalah seorang nabi yang sangat hebat. Sejak bayi hidupnya sudah penuh petualangan. Allah selalu menjaganya, lalu memilihnya menjadi nabi untuk mengajak manusia menyembah Allah saja.</p>
+      <div class="grid-2">
+        <div class="card"><h3>Mengapa penting dipelajari?</h3><p>Nabi Musa termasuk <span class="term" data-term="ululazmi">Ulul Azmi</span>, yaitu nabi yang super sabar dan kuat hatinya. Namanya paling sering disebut di Al-Qur'an, lho! Kisahnya mengajarkan banyak hal: kasih sayang ibu, berani membela kebenaran, dan sabar memimpin teman-temannya.</p></div>
+        <div class="card"><h3>Relevansi modern</h3><p>Pertolongan Allah sering datang dengan cara yang mengagetkan! Bayi yang ditakutkan malah dibesarkan di rumah raja jahat. Yang dulu kabur, pulang jadi nabi. Laut yang menghalangi malah membelah jadi jalan. Keren, kan?</p></div>
+      </div>
+      <div class="quote-box" style="margin-top:16px;"><strong>Tujuan buku ini:</strong> mengajak kamu mengenal Nabi Musa, mengikuti petualangannya, dan belajar menjadi anak baik yang sayang Allah.</div>
+      <div class="timeline" style="margin-top:16px;">
+        <div class="timeline-item active"><strong>Langkah 1</strong> Kenalan dulu dengan tokoh dan zaman Nabi Musa.</div>
+        <div class="timeline-item"><strong>Langkah 2</strong> Ikuti cerita seru beserta ayat Al-Qur'an-nya.</div>
+        <div class="timeline-item"><strong>Langkah 3</strong> Ambil pelajarannya untuk dipraktikkan sehari-hari.</div>
+      </div>
+    </section>
+
+    <!-- BAB 3 - PROFIL -->
+    <section class="chapter" id="bab3">
+      <h2>Bab 3 — Profil & Identitas Buku</h2>
+      <div class="grid-3">
+        <div class="kpi"><strong>Ulul Azmi</strong><span>Pangkat Nabi Musa</span></div>
+        <div class="kpi"><strong>10+</strong><span>Surah cerita Nabi Musa</span></div>
+        <div class="kpi"><strong>7</strong><span>Babak besar hidupnya</span></div>
+      </div>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="infobox"><h3>Informasi pokok</h3><div class="info-list">
+          <div class="info-row"><span>Judul</span><strong>Kisah Nabi Musa a.s.</strong></div>
+          <div class="info-row"><span>Tema utama</span><strong>Iman, berani, mengajak kebaikan, dan memimpin</strong></div>
+          <div class="info-row"><span>Sasaran pembaca</span><strong>Anak-anak, pelajar, dan keluarga</strong></div>
+          <div class="info-row"><span>Sumber utama</span><strong>Al-Qur'an dan hadits sahih</strong></div>
+        </div></div>
+        <div class="infobox"><h3>Infografis interaktif</h3><p class="small">Tiga tema utama dalam kisah ini: iman, ujian, dan jadi pemimpin yang baik.</p>
+          <div class="button-row">
+            <button class="tag active" data-info="iman" aria-pressed="true">Iman</button>
+            <button class="tag" data-info="ujian" aria-pressed="false">Ujian</button>
+            <button class="tag" data-info="pemimpin" aria-pressed="false">Pemimpin</button>
+          </div>
+          <div class="quote-box" id="infografisBox" aria-live="polite" style="margin-top:12px;">Pilih salah satu kotak di atas ya, biar bisa lihat penjelasan singkatnya.</div>
+        </div>
+      </div>
+      <div class="quote-box" style="margin-top:16px;"><strong>Catatan adab:</strong> di buku ini kita tidak menggambar wajah nabi ya, karena kita menghormati beliau. Gambarnya cuma simbol pemanis.</div>
+    </section>
+
+    <!-- BAB 4 - LATAR & SUMBER -->
+    <section class="chapter" id="bab4">
+      <h2>Bab 4 — Latar Sejarah dan Sumber Kisah</h2>
+      <p class="lead">Sebelum cerita dimulai, kita kenalan dulu yuk: siapa itu Bani Israil, gimana keadaan Mesir waktu itu, dan dari mana kita tahu kisahnya.</p>
+      <div class="grid-2">
+        <div class="topic-box">
+          <h3>Bani Israil di Mesir</h3>
+          <p>Bani Israil itu cucu-cicit Nabi Ya'qub. Dulu zaman Nabi Yusuf, mereka pindah ke Mesir dan disambut baik. Tapi lama-lama, raja Mesir berikutnya berubah jahat dan menindas mereka.</p>
+          <p>Al-Qur'an cerita bahwa <span class="term" data-term="firaun">Fir'aun</span> itu raja yang sangat sombong. Dia memecah belah rakyatnya, menindas yang lemah, bahkan tega membunuh bayi-bayi laki-laki. Sedih banget ya.</p>
+        </div>
+        <div class="topic-box">
+          <h3>Siapa Fir'aun?</h3>
+          <p>"Fir'aun" itu bukan nama orang, tapi gelar raja Mesir, mirip seperti "presiden" atau "kaisar". Al-Qur'an mengajarkan: dia raja yang sombong, kejam, dan suka menolak kebenaran.</p>
+          <p>Tapi istri Fir'aun ternyata beriman, lho! Namanya <em>Asiyah</em>. Walau tinggal bareng raja jahat, hatinya tetap baik dan sayang Allah. Hebat ya!</p>
+        </div>
+      </div>
+      <div class="dalil">
+        <div class="arabic">إِنَّ فِرْعَوْنَ عَلَا فِي الْأَرْضِ وَجَعَلَ أَهْلَهَا شِيَعًا يَسْتَضْعِفُ طَائِفَةً مِّنْهُمْ يُذَبِّحُ أَبْنَاءَهُمْ وَيَسْتَحْيِي نِسَاءَهُمْ ۚ إِنَّهُ كَانَ مِنَ الْمُفْسِدِينَ</div>
+        <p><strong>Terjemahan:</strong> "Sesungguhnya Fir'aun telah berbuat sewenang-wenang di bumi dan menjadikan penduduknya berpecah belah. Dia menindas segolongan dari mereka, menyembelih anak laki-laki mereka, dan membiarkan hidup anak-anak perempuan mereka. Sesungguhnya dia termasuk orang-orang yang berbuat kerusakan."</p>
+        <div class="ref">QS. Al-Qashash [28]: 4</div>
+      </div>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="card"><h3>Sumber: Al-Qur'an</h3><p>Cerita Nabi Musa ada di banyak surah Al-Qur'an, seperti <strong>Al-Baqarah, Al-A'raf, Thaha, Al-Qashash, Al-Kahf</strong>, dan lainnya.</p></div>
+        <div class="card"><h3>Sumber: Hadits sahih</h3><p>Hadits juga cerita hal-hal seru, misalnya saat Nabi Muhammad ﷺ bertemu Nabi Musa di langit ketika Isra Mi'raj.</p></div>
+        <div class="card"><h3>Sumber: Tafsir ulama</h3><p>Kitab tafsir ditulis para ulama untuk menjelaskan arti ayat dan pelajarannya, biar kita lebih paham.</p></div>
+        <div class="card"><h3>Catatan Isra'iliyyat</h3><p>Ada juga cerita-cerita lama yang disebut <span class="term" data-term="israiliyyat">Isra'iliyyat</span>. Kalau tidak melawan ajaran Islam, boleh kita dengar sebagai tambahan, tapi tidak dijadikan pegangan utama.</p></div>
+      </div>
+    </section>
+
+    <!-- BAB 5 - HADITS -->
+    <section class="chapter" id="bab5">
+      <h2>Bab 5 — Dalil Hadits Pilihan</h2>
+      <p class="lead">Selain Al-Qur'an, Nabi Muhammad ﷺ juga sering bercerita tentang Nabi Musa. Yuk kita baca beberapa haditsnya.</p>
+
+      <div class="dalil">
+        <div class="arabic">يَرْحَمُ اللَّهُ مُوسَى، قَدْ أُوذِيَ بِأَكْثَرَ مِنْ هَذَا فَصَبَرَ</div>
+        <p><strong>Terjemahan:</strong> "Semoga Allah merahmati Musa. Sungguh ia telah disakiti lebih banyak daripada ini, lalu ia bersabar."</p>
+        <p class="small"><strong>Ceritanya:</strong> ada orang yang menuduh Nabi ﷺ tidak adil membagi hadiah. Nabi ﷺ tidak marah, malah mencontoh kesabaran Nabi Musa yang dulu juga sering disakiti.</p>
+        <div class="ref">HR. Al-Bukhari no. 3405; Muslim no. 1062a</div>
+      </div>
+
+      <div class="dalil">
+        <div class="arabic">أَتَيْتُ عَلَى مُوسَى لَيْلَةَ أُسْرِيَ بِي عِنْدَ الْكَثِيبِ الْأَحْمَرِ، وَهُوَ قَائِمٌ يُصَلِّي فِي قَبْرِهِ</div>
+        <p><strong>Terjemahan:</strong> "Aku mendatangi Musa pada malam aku diperjalankan, di sisi bukit pasir merah, dan ia sedang berdiri salat di dalam kuburnya."</p>
+        <p class="small"><strong>Maknanya:</strong> Nabi Musa itu sangat mulia dan rajin ibadah, bahkan setelah wafat pun beliau tetap dimuliakan Allah.</p>
+        <div class="ref">HR. Muslim no. 2375a</div>
+      </div>
+
+      <div class="dalil">
+        <div class="arabic">لَا تُخَيِّرُونِي عَلَى مُوسَى</div>
+        <p><strong>Terjemahan:</strong> "Janganlah kalian melebihkan aku atas Musa..."</p>
+        <p class="small"><strong>Maknanya:</strong> kita tidak boleh membanding-bandingkan nabi sambil merendahkan salah satunya. Semua nabi mulia dan harus kita hormati.</p>
+        <div class="ref">HR. Al-Bukhari no. 3408</div>
+      </div>
+
+      <div class="dalil">
+        <div class="arabic">وَدِدْنَا أَنَّ مُوسَى كَانَ صَبَرَ، فَقَصَّ اللَّهُ عَلَيْنَا مِنْ خَبَرِهِمَا</div>
+        <p><strong>Terjemahan:</strong> "Kami berharap seandainya Musa bersabar, sehingga Allah akan menceritakan kepada kita lebih banyak tentang kabar keduanya (Musa & Khidir)."</p>
+        <div class="ref">HR. Al-Bukhari no. 3401</div>
+      </div>
+    </section>
+
+    <!-- BAB 6 - KELAHIRAN -->
+    <section class="chapter" id="bab6">
+      <h2>Bab 6 — Kelahiran, Sungai Nil, dan Istana Fir'aun</h2>
+      <p class="lead">Cerita awal ini menunjukkan bahwa walau orang jahat sudah merencanakan macam-macam, rencana Allah jauh lebih hebat untuk menyelamatkan hamba-Nya.</p>
+      <div class="grid-2">
+        <div class="topic-box">
+          <h3>Masa gelap: anak laki-laki dibunuh</h3>
+          <p>Nabi Musa lahir saat Fir'aun lagi tega-teganya membunuh bayi laki-laki Bani Israil. Bayangkan, lahirnya bayi mungil yang seharusnya membahagiakan malah bikin ibunya ketakutan.</p>
+          <p>Waktu itu Mesir punya banyak tentara, penyihir, dan pejabat yang mendukung Fir'aun. Tapi siapapun nggak bisa melawan rencana Allah.</p>
+        </div>
+        <div class="topic-box">
+          <h3>Ilham kepada ibu Musa</h3>
+          <p>Allah memberi <span class="term" data-term="ilham">ilham</span> ke hati ibu Musa: "Susuilah bayimu, kalau takut, hanyutkan saja ke sungai." Kedengarannya menakutkan ya, tapi itulah jalan yang Allah siapkan untuk menyelamatkannya.</p>
+          <p>Allah berjanji ke ibu Musa: "Jangan takut, jangan sedih. Bayimu pasti Aku kembalikan, bahkan dia akan jadi rasul." Janji Allah pasti ditepati!</p>
+        </div>
+      </div>
+      <div class="dalil">
+        <div class="arabic">وَأَوْحَيْنَا إِلَىٰ أُمِّ مُوسَىٰ أَنْ أَرْضِعِيهِ ۖ فَإِذَا خِفْتِ عَلَيْهِ فَأَلْقِيهِ فِي الْيَمِّ وَلَا تَخَافِي وَلَا تَحْزَنِي ۖ إِنَّا رَادُّوهُ إِلَيْكِ وَجَاعِلُوهُ مِنَ الْمُرْسَلِينَ</div>
+        <p><strong>Terjemahan:</strong> "Dan Kami ilhamkan kepada ibu Musa, 'Susuilah dia, dan apabila kamu khawatir terhadapnya, maka hanyutkanlah dia ke sungai. Janganlah takut dan jangan sedih. Sesungguhnya Kami akan mengembalikannya kepadamu dan menjadikannya termasuk para rasul.'"</p>
+        <div class="ref">QS. Al-Qashash [28]: 7</div>
+      </div>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="h-card"><h3>Sungai sebagai jalan</h3><p>Bayi Musa terhanyut sampai ke istana Fir'aun! Untungnya Asiyah, istri Fir'aun yang baik hati, langsung sayang dan mengangkatnya jadi anak.</p></div>
+        <div class="h-card"><h3>Kembali kepada ibunya</h3><p>Bayi Musa nggak mau menyusu ke siapapun. Lalu kakak perempuannya datang dan menawarkan seorang ibu menyusui — yaitu ibunya sendiri! Akhirnya Musa kembali ke pelukan mamanya. Subhanallah, janji Allah terbukti.</p></div>
+      </div>
+      <div class="quote-box" style="margin-top:16px;"><strong>Pelajaran:</strong> rencana Allah selalu lebih hebat dari rasa takut kita. Bayi yang dikhawatirkan justru dibesarkan di rumah musuh, lalu kembali ke pelukan ibunya. Ajaib, kan?</div>
+    </section>
+
+    <!-- BAB 7 - MADYAN -->
+    <section class="chapter" id="bab7">
+      <h2>Bab 7 — Masa Dewasa, Taubat, dan Hijrah ke Madyan</h2>
+      <div class="grid-2">
+        <div class="topic-box">
+          <h3>Musa menjadi dewasa</h3>
+          <p>Setelah Musa besar dan kuat, Allah memberinya ilmu dan kebijaksanaan. Jadi pemimpin itu nggak cukup cuma kuat ototnya, tapi juga harus pintar dan bisa berpikir bijak.</p>
+        </div>
+        <div class="topic-box">
+          <h3>Peristiwa yang membuatnya keluar</h3>
+          <p>Suatu hari Musa lihat dua orang berkelahi. Dia mau melerai dan memukul salah satunya, tapi pukulannya terlalu keras sampai orang itu meninggal. Musa nggak sengaja, lalu langsung menyesal dan minta ampun ke Allah.</p>
+        </div>
+      </div>
+      <div class="dalil">
+        <div class="arabic">قَالَ رَبِّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي فَغَفَرَ لَهُ ۚ إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ</div>
+        <p><strong>Terjemahan:</strong> "Dia berkata, 'Ya Tuhanku, sesungguhnya aku telah menzalimi diriku sendiri, maka ampunilah aku.' Lalu Allah mengampuninya. Sesungguhnya Dia Maha Pengampun lagi Maha Penyayang."</p>
+        <div class="ref">QS. Al-Qashash [28]: 16</div>
+      </div>
+      <div class="card" style="margin-top:14px;"><h3>Pelajaran tentang marah dan tanggung jawab</h3><p>Cerita ini bukan untuk meniru pukulannya ya. Justru pelajarannya: kalau punya tenaga, kita harus pakai dengan hati-hati. Membela teman itu baik, tapi tidak boleh sampai menyakiti orang lain.</p></div>
+
+      <h3 style="margin-top:20px;">Hijrah ke Madyan & menolong dua perempuan</h3>
+      <div class="grid-2">
+        <div class="card"><h3>Keluar menuju Madyan</h3><p>Para pejabat istana mau menangkap Musa. Akhirnya Musa pergi diam-diam meninggalkan Mesir. Dia hanya berdoa, "Ya Allah, selamatkan aku dari orang-orang yang zalim."</p></div>
+        <div class="card"><h3>Menolong di sumur</h3><p>Sampai di Madyan, Musa lihat dua kakak-adik perempuan yang kesulitan memberi minum kambingnya. Padahal Musa lagi capek dan lapar banget, tapi dia tetap menolong mereka duluan. Baik banget, kan?</p></div>
+      </div>
+      <div class="dalil">
+        <div class="arabic">فَسَقَىٰ لَهُمَا ثُمَّ تَوَلَّىٰ إِلَى الظِّلِّ فَقَالَ رَبِّ إِنِّي لِمَا أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ</div>
+        <p><strong>Terjemahan:</strong> "Maka Musa memberi minum ternak keduanya, kemudian ia kembali ke tempat yang teduh lalu berkata, 'Ya Tuhanku, sesungguhnya aku sangat memerlukan kebaikan apa pun yang Engkau turunkan kepadaku.'"</p>
+        <div class="ref">QS. Al-Qashash [28]: 24</div>
+      </div>
+      <div class="grid-3" style="margin-top:16px;">
+        <div class="h-card"><h3>Kuat</h3><p>Anak yang kuat sebaiknya membantu teman yang lemah, bukan membully.</p></div>
+        <div class="h-card"><h3>Amanah</h3><p>Anak amanah itu jujur, menepati janji, dan menjaga kepercayaan orang lain.</p></div>
+        <div class="h-card"><h3>Sekolah kepemimpinan</h3><p>Sambil jadi gembala domba, Musa belajar sabar, hati-hati, dan tegas saat melindungi. Cocok buat latihan jadi pemimpin nanti.</p></div>
+      </div>
+      <div class="quote-box" style="margin-top:14px;"><strong>Renungan:</strong> kadang Allah pindahkan kita ke tempat yang lebih sulit supaya kita jadi lebih kuat dan siap untuk tugas yang lebih besar.</div>
+    </section>
+
+    <!-- BAB 8 - WAHYU THUWA -->
+    <section class="chapter" id="bab8">
+      <h2>Bab 8 — Wahyu di Lembah Suci dan Tugas Kenabian</h2>
+      <p class="lead">Setelah bertahun-tahun tinggal di Madyan, Nabi Musa pulang bersama keluarganya. Di tengah jalan, Allah memanggilnya di sebuah lembah suci bernama Thuwa.</p>
+      <div class="grid-2">
+        <div class="topic-box"><h3>Melihat api di perjalanan</h3><p>Musa lihat api dari jauh. Dia kira itu cuma api buat menghangatkan badan, eh ternyata di situlah Allah memanggilnya pertama kali. Hal kecil ternyata bisa jadi awal kejadian besar.</p></div>
+        <div class="topic-box"><h3>Panggilan tauhid</h3><p>Allah memperkenalkan diri dan menyuruh Musa hanya menyembah-Nya serta rajin salat. Iman dulu yang harus kuat, baru kita bisa berbuat baik kepada orang lain.</p></div>
+      </div>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="card"><h3>Dua mukjizat awal</h3><p>Tongkat Musa berubah jadi ular besar yang bergerak-gerak. Tangannya juga bisa bersinar putih terang. Dua keajaiban ini jadi "senjata" Musa buat menghadapi Fir'aun.</p><p class="small"><strong>Catatan:</strong> mukjizat itu bukan buat pamer, tapi sebagai bukti bahwa Musa benar utusan Allah.</p></div>
+        <div class="card"><h3>Tugas berat & doa</h3><p>Disuruh balik menemui Fir'aun, Musa nggak sok jagoan. Dia justru berdoa minta hati yang tenang, urusan yang dimudahkan, dan lidah yang lancar bicara.</p></div>
+      </div>
+      <div class="dalil">
+        <div class="arabic">قَالَ رَبِّ اشْرَحْ لِي صَدْرِي ۝ وَيَسِّرْ لِي أَمْرِي ۝ وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي ۝ يَفْقَهُوا قَوْلِي</div>
+        <p><strong>Terjemahan:</strong> "Ya Tuhanku, lapangkanlah dadaku, mudahkanlah urusanku, dan lepaskanlah kekakuan dari lidahku agar mereka memahami perkataanku."</p>
+        <div class="ref">QS. Thaha [20]: 25–28</div>
+      </div>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="card"><h3>Harun sebagai pendamping</h3><p>Musa minta kakaknya, Nabi Harun, jadi temannya berdakwah. Anak hebat itu yang tahu kapan butuh bantuan dan pintar memilih teman yang baik.</p></div>
+        <div class="card"><h3>Dakwah dengan ucapan lembut</h3><p>Walau Fir'aun jahat banget, Allah tetap menyuruh Musa dan Harun bicara dengan lemah lembut — namanya <em>qaulan layyinan</em>. Marah-marah malah bikin orang nggak mau dengar.</p>
+          <div class="dalil" style="margin-top:10px;padding:12px;">
+            <div class="arabic" style="font-size:1.5rem;">فَقُولَا لَهُ قَوْلًا لَّيِّنًا</div>
+            <p class="small">"Maka berbicaralah kamu berdua kepadanya dengan perkataan yang lemah lembut."</p>
+            <div class="ref">QS. Thaha [20]: 44</div>
+          </div>
+        </div>
+      </div>
+      <div class="dalil" style="margin-top:16px;">
+        <div class="arabic">لَا تَخَافَا ۖ إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ</div>
+        <p><strong>Terjemahan:</strong> "Janganlah kamu berdua takut. Sesungguhnya Aku bersama kamu berdua; Aku mendengar dan melihat."</p>
+        <div class="ref">QS. Thaha [20]: 46</div>
+      </div>
+    </section>
+
+    <!-- BAB 9 - DAKWAH & LAUT -->
+    <section class="chapter" id="bab9">
+      <h2>Bab 9 — Dakwah kepada Fir'aun dan Laut Terbelah</h2>
+      <p class="lead">Sekarang bagian paling seru: pertarungan antara kebenaran dan kesombongan. Fir'aun punya tentara dan kekuasaan; Nabi Musa punya Allah di sampingnya.</p>
+
+      <div class="accordion">
+        <div class="accordion-item open"><button class="accordion-btn">Musa & Harun menghadap Fir'aun <span>+</span></button><div class="accordion-content">Musa dan Harun mengajak Fir'aun menyembah Allah dan minta supaya Bani Israil dibebaskan. Fir'aun marah dan mengungkit kesalahan Musa di masa lalu. Musa mengakuinya, tapi sekarang dia sudah bertaubat dan jadi nabi.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">Kesombongan Fir'aun <span>+</span></button><div class="accordion-content">Fir'aun mengejek Musa, bahkan ngaku-ngaku jadi tuhan. Musa nggak takut, tetap menjelaskan dengan tegas. Fir'aun lalu mengancam mau memenjarakan Musa.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">Pertemuan dengan para penyihir <span>+</span></button><div class="accordion-content">Fir'aun mengumpulkan penyihir-penyihir hebat. Mereka melempar tali dan tongkat yang berubah jadi ular. Tapi tongkat Musa berubah jadi ular besar yang melahap semuanya! Para penyihir langsung tahu itu bukan sihir biasa, lalu sujud dan beriman kepada Allah.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">Ancaman & keteguhan para mukmin <span>+</span></button><div class="accordion-content">Fir'aun marah dan mengancam mau menghukum para penyihir. Tapi iman mereka udah kuat, jadi ancaman itu nggak ada apa-apanya. Mereka justru berdoa agar Allah wafatkan mereka dalam keadaan beriman.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">Tanda-tanda peringatan untuk Fir'aun <span>+</span></button><div class="accordion-content">Allah kirim bencana ke kaum Fir'aun: musim kering, banjir, serangan belalang, kutu, katak, dan air berubah jadi darah! Setiap kena bencana, mereka janji mau beriman. Tapi begitu bencananya hilang, mereka ingkar lagi. Janji bohong itu nggak baik ya.</div></div>
+      </div>
+
+      <div class="card" style="margin-top:16px;"><h3>Perintah keluar pada malam hari</h3><p>Akhirnya Allah perintah Musa membawa Bani Israil kabur dari Mesir malam-malam. Fir'aun dan pasukannya ngejar. Pas sampai laut, Bani Israil panik: di depan ada laut, di belakang ada tentara!</p></div>
+      <div class="dalil">
+        <div class="arabic">قَالَ كَلَّا ۖ إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ</div>
+        <p><strong>Terjemahan:</strong> "Musa berkata, 'Sekali-kali tidak. Sesungguhnya Tuhanku bersamaku; Dia akan memberi petunjuk kepadaku.'"</p>
+        <div class="ref">QS. Asy-Syu'ara [26]: 62</div>
+      </div>
+      <div class="dalil">
+        <div class="arabic">فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ۖ فَانفَلَقَ فَكَانَ كُلُّ فِرْقٍ كَالطَّوْدِ الْعَظِيمِ</div>
+        <p><strong>Terjemahan:</strong> "Lalu Kami wahyukan kepada Musa, 'Pukullah laut itu dengan tongkatmu.' Maka terbelahlah laut itu, sehingga setiap belahan seperti gunung yang besar."</p>
+        <div class="ref">QS. Asy-Syu'ara [26]: 63</div>
+      </div>
+      <div class="quote-box" style="margin-top:14px;"><strong>Akhir si sombong:</strong> Fir'aun dan pasukannya tenggelam. Pas hampir mati, Fir'aun baru ngaku beriman, tapi udah terlambat. Pelajarannya: jangan tunggu kena masalah baru ingat Allah ya.</div>
+    </section>
+
+    <!-- BAB 10 - BIMBING BANI ISRAIL -->
+    <section class="chapter" id="bab10">
+      <h2>Bab 10 — Membimbing Bani Israil Setelah Diselamatkan</h2>
+      <p class="lead">Setelah selamat dari Fir'aun, perjuangan Bani Israil belum selesai. Mereka harus belajar jadi umat yang patuh, bersyukur, dan bertanggung jawab.</p>
+      <div class="grid-2">
+        <div class="card"><h3>Ujian setelah selamat</h3><p>Baru saja keluar dari laut, mereka lihat kaum lain menyembah patung. Eh, mereka malah minta Musa bikinin patung juga! Padahal Allah baru aja menyelamatkan mereka.</p></div>
+        <div class="card"><h3>Nikmat manna, salwa & naungan</h3><p>Allah baik banget: kirim awan biar nggak kepanasan, makanan manna (manis) dan salwa (daging burung), dan air mengalir dari batu! Tapi mereka masih ngeluh dan minta makanan lain.</p></div>
+        <div class="card"><h3>Janji di gunung & anak sapi</h3><p>Saat Musa pergi ke gunung 40 hari menerima wahyu, ada orang nakal bernama <span class="term" data-term="samiri">Samiri</span> yang bikin patung anak sapi dari emas. Bani Israil malah ikut-ikutan menyembahnya. Sedih, Musa pulang mendapati mereka menyimpang.</p></div>
+        <div class="card"><h3>Kisah sapi betina</h3><p>Allah pernah perintah Bani Israil menyembelih sapi. Mereka tanya terus: warnanya apa, umurnya berapa, dipakai apa. Karena banyak bertanya untuk mempersulit, perintah yang tadinya gampang jadi ribet sendiri.</p></div>
+      </div>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="h-card"><h3>Bertanya untuk paham</h3><p>Bertanya karena ingin paham itu bagus — bikin kita siap melaksanakannya.</p></div>
+        <div class="h-card"><h3>Bertanya untuk menghindar</h3><p>Bertanya cuma untuk cari alasan dan menunda perintah itu nggak baik ya.</p></div>
+      </div>
+      <div class="card" style="margin-top:14px;"><h3>Menolak masuk ke negeri yang diperintahkan</h3><p>Allah suruh Bani Israil masuk ke negeri yang dijanjikan. Tapi mereka takut sama penduduknya yang kuat, lalu bilang ke Musa, "Kamu aja sama Tuhanmu yang pergi perang." Karena pembangkangan ini, mereka harus mengembara di padang gurun selama 40 tahun!</p></div>
+      <div class="dalil">
+        <div class="arabic">قَالَ مُوسَىٰ لِقَوْمِهِ اسْتَعِينُوا بِاللَّهِ وَاصْبِرُوا ۖ إِنَّ الْأَرْضَ لِلَّهِ يُورِثُهَا مَن يَشَاءُ مِنْ عِبَادِهِ ۖ وَالْعَاقِبَةُ لِلْمُتَّقِينَ</div>
+        <p><strong>Terjemahan:</strong> "Musa berkata kepada kaumnya, 'Mohonlah pertolongan kepada Allah dan bersabarlah. Sesungguhnya bumi ini milik Allah; Dia mewariskannya kepada siapa saja yang Dia kehendaki di antara hamba-hamba-Nya. Kesudahan yang baik bagi orang-orang yang bertakwa.'"</p>
+        <div class="ref">QS. Al-A'raf [7]: 128</div>
+      </div>
+    </section>
+
+    <!-- BAB 11 - KHIDIR & QARUN -->
+    <section class="chapter" id="bab11">
+      <h2>Bab 11 — Pelajaran Lanjutan: Khidir dan Qarun</h2>
+      <p class="lead">Dua cerita ini ngajarin dua pelajaran penting: jangan sombong waktu belajar ilmu, dan jangan sombong gara-gara kaya.</p>
+
+      <h3 style="margin-top:8px;">Nabi Musa a.s. dan <span class="term" data-term="khidir">Khidir</span></h3>
+      <p>Di surah Al-Kahf, Nabi Musa pergi belajar kepada Nabi Khidir, hamba Allah yang punya ilmu khusus. Nabi sebesar Musa pun masih disuruh belajar — apalagi kita ya!</p>
+      <div class="dalil">
+        <div class="arabic">قَالَ لَهُ مُوسَىٰ هَلْ أَتَّبِعُكَ عَلَىٰ أَن تُعَلِّمَنِ مِمَّا عُلِّمْتَ رُشْدًا</div>
+        <p><strong>Terjemahan:</strong> "Musa berkata kepadanya, 'Bolehkah aku mengikutimu agar engkau mengajarkan kepadaku sebagian ilmu yang benar di antara ilmu yang telah diajarkan kepadamu?'"</p>
+        <div class="ref">QS. Al-Kahf [18]: 66</div>
+      </div>
+      <div class="grid-3" style="margin-top:14px;">
+        <div class="h-card"><h3>Perahu dilubangi</h3><p><strong>Kelihatannya:</strong> Khidir merusak perahu orang miskin. <strong>Padahal:</strong> dia menyelamatkannya, karena ada raja jahat yang suka merampas perahu yang bagus.</p></div>
+        <div class="h-card"><h3>Anak dibunuh</h3><p><strong>Kelihatannya:</strong> Khidir berbuat kejam. <strong>Padahal:</strong> Allah tahu anak itu nanti akan menyusahkan orang tuanya yang beriman, lalu Allah ganti dengan anak yang lebih baik.</p></div>
+        <div class="h-card"><h3>Dinding ditegakkan</h3><p><strong>Kelihatannya:</strong> Khidir kerja gratis padahal penduduknya pelit. <strong>Padahal:</strong> di bawah dinding itu ada harta milik anak yatim yang Allah lindungi.</p></div>
+      </div>
+      <div class="quote-box" style="margin-top:14px;"><strong>Pelajaran:</strong> jangan buru-buru menyalahkan sesuatu yang kelihatannya buruk. Kadang Allah punya rencana baik yang belum kita lihat. Sabar dulu ya.</div>
+
+      <h3 style="margin-top:20px;">Qarun: harta yang membutakan</h3>
+      <p>Qarun itu masih saudara sebangsa Nabi Musa. Allah kasih dia harta banyak banget — kunci gudangnya aja sampai berat dipikul beberapa orang! Tapi Qarun sombong dan bilang, "Ini semua karena kepintaranku sendiri." Padahal semua dari Allah.</p>
+      <div class="dalil">
+        <div class="arabic">وَابْتَغِ فِيمَا آتَاكَ اللَّهُ الدَّارَ الْآخِرَةَ ۖ وَلَا تَنسَ نَصِيبَكَ مِنَ الدُّنْيَا ۖ وَأَحْسِن كَمَا أَحْسَنَ اللَّهُ إِلَيْكَ ۖ وَلَا تَبْغِ الْفَسَادَ فِي الْأَرْضِ ۖ إِنَّ اللَّهَ لَا يُحِبُّ الْمُفْسِدِينَ</div>
+        <p><strong>Terjemahan:</strong> "Carilah pada apa yang dianugerahkan Allah kepadamu negeri akhirat, tetapi janganlah lupakan bagianmu di dunia. Berbuat baiklah sebagaimana Allah berbuat baik kepadamu, dan janganlah mencari kerusakan di bumi. Sesungguhnya Allah tidak menyukai orang-orang yang berbuat kerusakan."</p>
+        <div class="ref">QS. Al-Qashash [28]: 77</div>
+      </div>
+      <p>Karena saking sombongnya, Allah tenggelamkan Qarun beserta rumah dan hartanya ke dalam bumi! Orang-orang yang tadinya iri sama hartanya jadi sadar: kaya tanpa iman itu bahaya.</p>
+      <div class="grid-2" style="margin-top:14px;">
+        <div class="h-card"><h3>Khidir menguji kesabaran ilmu</h3><p>Setinggi apapun kepintaran kita, masih banyak yang belum tahu. Jadi tetap rendah hati ya.</p></div>
+        <div class="h-card"><h3>Qarun menguji kesadaran harta</h3><p>Kalau punya banyak uang atau mainan, dipakai bersyukur dan berbagi, bukan dipamerkan.</p></div>
+      </div>
+    </section>
+
+    <!-- BAB 12 - HIKMAH -->
+    <section class="chapter" id="bab12">
+      <h2>Bab 12 — Hikmah dan Teladan Akhlak</h2>
+      <p class="lead">Kisah Nabi Musa bukan cuma cerita lama. Kisah ini seperti cermin buat kita: belajar beriman, mengenali kekurangan diri, dan jadi anak yang akhlaknya baik.</p>
+      <div class="accordion">
+        <div class="accordion-item open"><button class="accordion-btn">1. Tauhid adalah dasar keberanian <span>+</span></button><div class="accordion-content">Musa berani karena yakin Allah bersamanya, bukan karena sok jago. Berani yang baik itu tetap sopan dan nggak butuh pujian orang.</div></div>
+        <div class="accordion-item open"><button class="accordion-btn">2. Doa membuat hati kuat <span>+</span></button><div class="accordion-content">Sebelum bertemu Fir'aun, Musa berdoa minta hati tenang dan lidah lancar. Jadi sebelum ujian, presentasi, atau hal sulit lainnya, jangan lupa berdoa juga ya.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">3. Kelembutan ≠ kelemahan <span>+</span></button><div class="accordion-content">Allah suruh Musa bicara lembut, bahkan ke Fir'aun! Lembut bukan berarti takut atau diam saja, tapi menyampaikan kebenaran tanpa marah-marah.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">4. Taubat harus cepat <span>+</span></button><div class="accordion-content">Begitu sadar salah, Musa langsung minta ampun ke Allah. Kalau kita salah, langsung minta maaf, jangan tunggu dimarahin dulu.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">5. Menolong membuka pintu pertolongan <span>+</span></button><div class="accordion-content">Di Madyan, Musa lagi capek dan lapar tapi tetap nolong dua kakak-adik perempuan. Setelah itu Allah kasih dia rumah, kerjaan, dan keluarga. Jangan tunggu kaya dulu baru mau berbuat baik.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">6. Pemimpin sabar terhadap yang dipimpin <span>+</span></button><div class="accordion-content">Musa hadapi dua hal sekaligus: musuh di depan (Fir'aun) dan kawan yang suka ngeluh (Bani Israil). Jadi pemimpin atau kakak itu nggak gampang, butuh sabar.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">7. Ilmu menuntut rendah hati <span>+</span></button><div class="accordion-content">Walau udah pintar, masih banyak hal yang belum kita tahu. Tetap rendah hati ya, jangan suka sombong.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">8. Kekayaan adalah amanah <span>+</span></button><div class="accordion-content">Qarun jadi contoh: kalau punya uang banyak tapi nggak ingat Allah, bisa celaka. Yang punya rezeki harusnya makin bersyukur dan suka berbagi.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">9. Jangan menunda iman & kebaikan <span>+</span></button><div class="accordion-content">Fir'aun baru beriman pas mau tenggelam — terlambat! Jangan tunggu sakit atau kena musibah baru ingat Allah.</div></div>
+        <div class="accordion-item"><button class="accordion-btn">10. Pertolongan Allah di ujung usaha <span>+</span></button><div class="accordion-content">Pertolongan Allah sering datang di ujung usaha. Ibu Musa harus rela melepas bayinya, Musa harus jalan jauh, Bani Israil harus sampai tepi laut. Jangan menyerah duluan ya.</div></div>
+      </div>
+    </section>
+
+    <!-- BAB 13 - PENERAPAN -->
+    <section class="chapter" id="bab13">
+      <h2>Bab 13 — Penerapan dalam Kehidupan Sehari-hari</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Di Sekolah</h3>
+          <ul>
+            <li><strong>Berani jujur:</strong> kalau ada teman yang di-bully, bilang ke guru dan temani dia. Jangan ikut ngetawain ya.</li>
+            <li><strong>Bacalah doa Musa sebelum maju ke depan kelas:</strong> "Rabbisyrahli shadri..." biar hati tenang dan ucapan lancar.</li>
+            <li><strong>Jangan sombong kalau pintar:</strong> ingat kisah Khidir, masih banyak ilmu yang belum kita tahu.</li>
+            <li><strong>Jangan mempersulit aturan:</strong> seperti kisah sapi betina, banyak tanya cuma bikin ribet.</li>
+            <li><strong>Menolong duluan:</strong> seperti Musa di Madyan yang bantu tanpa diminta.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Di Rumah</h3>
+          <ul>
+            <li><strong>Jadi anak yang ngademin keluarga</strong> dengan ucapan yang baik dan sopan.</li>
+            <li><strong>Bantu pekerjaan rumah</strong> tanpa harus disuruh dulu.</li>
+            <li><strong>Kalau lagi marah:</strong> ambil napas, berwudhu, jangan teriak atau memukul.</li>
+            <li><strong>Doakan ayah, ibu, dan saudara</strong> setiap selesai salat.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Dalam Pertemanan</h3>
+          <ul>
+            <li>Pilih teman yang ngajak ke kebaikan. Teman bisa mempengaruhi kita banget, lho.</li>
+            <li>Jangan terlalu kagum sama yang punya mainan atau gadget mahal. Ingat kisah Qarun ya.</li>
+            <li>Kalau salah, berani minta maaf duluan. Jangan banyak alasan.</li>
+            <li>Kalau mau menasihati teman, jangan di depan umum. Bicara berdua, dengan lembut.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Dalam Masyarakat</h3>
+          <p>Fir'aun bukan cuma sombong sendiri, dia juga membuat banyak orang ikut menindas. Kita harus peduli sama teman yang miskin atau di-bully, dan tetap berbuat baik dengan jujur dan adil.</p>
+        </div>
+      </div>
+      <div class="quote-box" style="margin-top:16px;"><strong>Tantangan 7 hari:</strong> selama seminggu, tulis satu kebaikan kecil setiap hari yang meniru Nabi Musa — menolong teman, jujur, menahan marah, baca doa, atau belajar dengan rendah hati. Yuk dicoba!</div>
+    </section>
+
+    <!-- BAB 14 - KUIS -->
+    <section class="chapter" id="bab14">
+      <h2>Bab 14 — Kuis Interaktif (15 Soal)</h2>
+      <div class="quiz-layout">
+        <div class="quiz-panel">
+          <div class="small" id="quizProgress">Soal 1 dari 15</div>
+          <div class="card" style="margin-top:10px;">
+            <strong id="quizTitle">Soal</strong>
+            <div class="quiz-q" id="quizQuestion"></div>
+            <div class="quiz-options" id="quizOptions"></div>
+            <div class="quiz-hint" id="quizNote">Pilih jawabanmu, lalu klik Next ya.</div>
+          </div>
+          <div class="quiz-controls" style="margin-top:14px;">
+            <button class="ghost-btn" id="quizBack">Back</button>
+            <button class="primary-btn" id="quizNext">Next</button>
+            <button class="ghost-btn" id="quizReset">Ulang Kuis</button>
+          </div>
+          <div class="result-box" id="quizFeedback" style="margin-top:14px;">Yuk jawab soal pertamanya!</div>
+        </div>
+        <div class="quiz-panel">
+          <h3>Ringkasan Skor</h3>
+          <div class="score" id="scoreDisplay">0/15</div>
+          <p id="scoreNote">Kerjakan kuis ini ya, biar tahu seberapa hafal kamu sama kisah Nabi Musa.</p>
+          <div class="divider"></div>
+          <p><strong>Yang akan ditanyakan:</strong> petualangan Nabi Musa, ayat Al-Qur'an, tokoh-tokohnya (Fir'aun, Harun, Khidir, Qarun), dan pelajarannya.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAB 15 - PENUTUP -->
+    <section class="chapter" id="bab15">
+      <h2>Bab 15 — Penutup, Glosarium, dan Daftar Pustaka</h2>
+      <div class="grid-2">
+        <div class="card"><h3>Ringkasan</h3><p>Nabi Musa adalah teladan keren: sejak bayi sudah penuh ujian, pernah salah dan bertaubat, hijrah ke Madyan, jadi nabi di Thuwa, lalu menghadapi Fir'aun dan membimbing Bani Israil. Banyak banget pelajarannya!</p></div>
+        <div class="card"><h3>Renungan akhir</h3><p>Allah selalu bersama anak yang taat. Bukan berarti hidupnya gampang ya — Nabi Musa juga harus berjalan, sabar, dan berusaha. Tapi Allah selalu menolong di waktu yang tepat.</p></div>
+      </div>
+      <div class="dalil" style="margin-top:16px;">
+        <div class="arabic">لَا تَخَافَا ۖ إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ</div>
+        <p><strong>Terjemahan:</strong> "Janganlah kamu berdua takut. Sesungguhnya Aku bersama kamu berdua; Aku mendengar dan melihat."</p>
+        <div class="ref">QS. Thaha [20]: 46</div>
+      </div>
+
+      <div class="divider"></div>
+      <h3>Glosarium</h3>
+      <div class="glos-grid">
+        <div class="glos-item"><strong>Bani Israil</strong>Cucu-cicit Nabi Ya'qub yang dijuluki Israil.</div>
+        <div class="glos-item"><strong>Fir'aun</strong>Gelar raja Mesir. Dalam kisah ini, dia jadi simbol orang sombong dan jahat.</div>
+        <div class="glos-item"><strong>Madyan</strong>Daerah tempat Nabi Musa tinggal setelah kabur dari Mesir.</div>
+        <div class="glos-item"><strong>Thuwa</strong>Lembah suci tempat pertama kali Allah berbicara kepada Nabi Musa.</div>
+        <div class="glos-item"><strong>Mukjizat</strong>Keajaiban dari Allah untuk membuktikan seseorang benar-benar nabi.</div>
+        <div class="glos-item"><strong>Tawakkal</strong>Pasrah kepada Allah setelah kita sudah berusaha sebaik mungkin.</div>
+        <div class="glos-item"><strong>Isra'iliyyat</strong>Cerita-cerita lama dari Bani Israil. Tidak semuanya bisa dipercaya.</div>
+        <div class="glos-item"><strong>Ulul Azmi</strong>Sebutan untuk lima nabi paling sabar dan kuat.</div>
+        <div class="glos-item"><strong>Asiyah</strong>Istri Fir'aun yang baik dan beriman kepada Allah.</div>
+        <div class="glos-item"><strong>Samiri</strong>Orang nakal yang membujuk Bani Israil menyembah patung anak sapi.</div>
+        <div class="glos-item"><strong>Khidir</strong>Hamba Allah yang punya ilmu khusus dan jadi guru Nabi Musa.</div>
+        <div class="glos-item"><strong>Qarun</strong>Orang kaya yang sombong dan ditenggelamkan ke dalam bumi.</div>
+      </div>
+
+      <div class="divider"></div>
+      <h3>Daftar Pustaka</h3>
+      <div class="grid-2">
+        <div class="card"><h3>Sumber utama</h3><ul>
+          <li><strong>Al-Qur'an al-Karim:</strong> QS. Al-Baqarah [2]: 49–74; Al-A'raf [7]: 103–171; Yunus [10]: 75–92; Ibrahim [14]: 5–8; Al-Kahf [18]: 60–82; Maryam [19]: 51–53; Thaha [20]: 9–98; Asy-Syu'ara [26]: 10–68; An-Naml [27]: 7–14; Al-Qashash [28]: 3–46 & 76–82; Ghafir [40]: 23–46; Ash-Shaff [61]: 5.</li>
+          <li><strong>Shahih al-Bukhari</strong> — hadits no. 3401, 3405, 3408.</li>
+          <li><strong>Shahih Muslim</strong> — hadits no. 1062a dan 2375a.</li>
+        </ul></div>
+        <div class="card"><h3>Tafsir & rujukan pendukung</h3><ul>
+          <li>Ibnu Katsir, <em>Qashash al-Anbiya</em> & <em>Tafsir al-Qur'an al-'Azhim</em>.</li>
+          <li>Ath-Thabari, <em>Jami' al-Bayan 'an Ta'wil Ay al-Qur'an</em>.</li>
+          <li>Al-Qurthubi, <em>Al-Jami' li Ahkam al-Qur'an</em>.</li>
+          <li>As-Sa'di, <em>Taysir al-Karim ar-Rahman</em>.</li>
+          <li><a href="https://quran.com/" target="_blank" rel="noopener">Quran.com</a> & <a href="https://sunnah.com/" target="_blank" rel="noopener">Sunnah.com</a>.</li>
+        </ul></div>
+      </div>
+      <p class="footer-note" style="margin-top:16px;">Buku ini dibuat untuk teman-teman belajar. Kalau ingin tahu lebih dalam, baca Al-Qur'an langsung dan tanyakan kepada guru atau orang tua ya.</p>
+    </section>
+
+  </main>
+</div>
+</div>
+
+<script>
+(() => {
+  const quizData = [
+    ["Nabi Musa a.s. termasuk golongan rasul yang disebut ...",["Ulul Azmi","Khulafa","Wali","Tabi'in"],0,"Benar. Nabi Musa adalah salah satu Ulul Azmi."],
+    ["Penguasa Mesir yang menindas Bani Israil dalam kisah Nabi Musa adalah ...",["Namrudz","Fir'aun","Heraklius","Qaisar"],1,"Benar. Fir'aun adalah gelar penguasa Mesir saat itu."],
+    ["Ibu Musa diperintahkan menghanyutkan bayinya ke ...",["Laut Merah","Sungai Nil (al-yamm)","Sumur Madyan","Sungai Eufrat"],1,"Benar. Sesuai QS. Al-Qashash: 7, beliau menghanyutkan bayi ke sungai."],
+    ["Setelah peristiwa di Mesir, Nabi Musa berhijrah ke ...",["Yaman","Madyan","Syam","Habasyah"],1,"Benar. Musa keluar dari Mesir menuju Madyan."],
+    ["Di Madyan, Musa dipuji karena dua sifat, yaitu ...",["Kaya & terkenal","Kuat & amanah","Cerdas & sombong","Tampan & populer"],1,"Benar. Beliau dipuji 'kuat & amanah' (al-qawiy al-amin)."],
+    ["Lembah suci tempat Musa menerima panggilan wahyu adalah ...",["Hira","Thuwa","Tursina-Yaman","Arafah"],1,"Benar. Lembah Thuwa di kawasan Thur/Sinai."],
+    ["Dua mukjizat awal yang Allah berikan kepada Musa adalah ...",["Membelah bulan & menghidupkan mati","Tongkat menjadi ular & tangan bercahaya","Hujan emas & angin topan","Hilang wujud & terbang"],1,"Benar. Tongkat menjadi ular dan tangan bercahaya."],
+    ["Musa memohon agar saudaranya menjadi pendamping dakwah. Saudara itu adalah ...",["Yusuf","Harun","Syu'aib","Ya'qub"],1,"Benar. Harun a.s. menjadi pendamping Musa."],
+    ["Allah memerintahkan Musa & Harun berbicara kepada Fir'aun dengan ...",["Suara keras","Perkataan lembut (qaulan layyinan)","Bahasa rahasia","Ancaman"],1,"Benar. QS. Thaha: 44 — qaulan layyinan."],
+    ["Para penyihir Fir'aun setelah melihat mukjizat Musa memilih ...",["Tetap kafir","Sujud & beriman kepada Tuhan Musa & Harun","Melarikan diri","Menantang Musa"],1,"Benar. Mereka langsung sujud dan beriman."],
+    ["Setelah laut terbelah, Fir'aun dan pasukannya ...",["Selamat","Tenggelam","Kembali ke istana","Bertaubat & diampuni"],1,"Benar. Fir'aun tenggelam. Iman yang ia ucapkan saat sekarat tidak diterima."],
+    ["Hamba saleh yang menjadi guru Musa dalam Surah Al-Kahf dikenal sebagai ...",["Luqman","Khidir","Uzair","Dzulkarnain"],1,"Benar. Tradisi menyebutnya Khidir."],
+    ["Tokoh kaya dari kaum Musa yang sombong dan dibenamkan ke bumi adalah ...",["Haman","Qarun","Samiri","Bal'am"],1,"Benar. Qarun, sebagaimana QS. Al-Qashash: 76–82."],
+    ["Tokoh yang menggoda sebagian Bani Israil menyembah anak sapi adalah ...",["Haman","Samiri","Qarun","Fir'aun"],1,"Benar. Samiri membuat patung anak sapi."],
+    ["Pelajaran utama dari kisah Musa & Khidir adalah ...",["Berani melawan kebenaran","Rendah hati dalam ilmu & sabar menanti penjelasan","Cukup tahu tanpa belajar","Menghakimi cepat"],1,"Benar. Ilmu menuntut rendah hati."]
+  ];
+  const terms = {
+    ululazmi:'Ulul Azmi: para rasul dengan keteguhan luar biasa — Nuh, Ibrahim, Musa, Isa, Muhammad ﷺ.',
+    firaun:'Fir\'aun: gelar penguasa Mesir yang dalam kisah ini menjadi simbol kesombongan dan kezaliman.',
+    israiliyyat:'Isra\'iliyyat: riwayat dari tradisi Bani Israil; tidak semua dapat dipastikan kebenarannya.',
+    ilham:'Ilham: bisikan/petunjuk dari Allah, di sini berupa wahyu kepada ibu Musa.',
+    samiri:'Samiri: tokoh dalam Al-Qur\'an yang menggoda Bani Israil menyembah patung anak sapi.',
+    khidir:'Khidir: hamba Allah yang diberi rahmat dan ilmu khusus; menjadi guru Musa di Surah Al-Kahf.'
+  };
+  const infografisViews = {
+    iman:'Iman: tauhid menjadi dasar segala perjuangan — bukan kemarahan sosial semata.',
+    ujian:'Ujian: dari ancaman saat bayi, kesalahan dewasa, hijrah, hingga kepemimpinan umat.',
+    pemimpin:'Pemimpin: lembut dalam dakwah, tegas pada prinsip, sabar terhadap kelemahan kaumnya.'
+  };
+
+  const quizTitle = document.getElementById('quizTitle');
+  const quizQuestion = document.getElementById('quizQuestion');
+  const quizOptions = document.getElementById('quizOptions');
+  const quizProgress = document.getElementById('quizProgress');
+  const quizFeedback = document.getElementById('quizFeedback');
+  const quizBack = document.getElementById('quizBack');
+  const quizNext = document.getElementById('quizNext');
+  const quizReset = document.getElementById('quizReset');
+  const scoreDisplay = document.getElementById('scoreDisplay');
+  const scoreNote = document.getElementById('scoreNote');
+  const noteField = document.getElementById('noteField');
+  const noteStatus = document.getElementById('noteStatus');
+  const searchBox = document.getElementById('searchBox');
+  const searchResults = document.getElementById('searchResults');
+  const progressFill = document.getElementById('progressFill');
+  const progressText = document.getElementById('progressText');
+  const readingBar = document.getElementById('readingBar');
+  const toc = [...document.querySelectorAll('#toc a')];
+  const tooltip = document.getElementById('tooltip');
+  const scrim = document.getElementById('scrim');
+  const body = document.body;
+  const storage = {note:'musa-note',theme:'musa-theme',bookmark:'musa-bookmark',quiz:'musa-quiz'};
+  let quizIndex = 0;
+  let selectedAnswers = JSON.parse(localStorage.getItem(storage.quiz) || '[]');
+
+  function save(k,v){localStorage.setItem(k,typeof v==='string'?v:JSON.stringify(v));}
+  function load(k,f){const v=localStorage.getItem(k);return v===null?f:v;}
+  function setTheme(m){body.classList.toggle('dark',m==='dark');document.getElementById('themeToggle').setAttribute('aria-pressed',String(m==='dark'));save(storage.theme,m);}
+  function getCurrentChapter(){const mid=window.innerHeight*0.35;let c='bab1';document.querySelectorAll('.chapter').forEach(s=>{const r=s.getBoundingClientRect();if(r.top<=mid&&r.bottom>=mid)c=s.id;});return c;}
+  function setBookmark(id){save(storage.bookmark,id);document.getElementById('jumpBookmark').title='Bookmark: '+id;}
+  function updateProgress(){const chs=[...document.querySelectorAll('.chapter')];const top=window.scrollY+window.innerHeight*.35;let seen=0,active=chs[0]?.id||'bab1';chs.forEach((s,i)=>{if(s.offsetTop<=top){seen=i+1;active=s.id;}});const pct=Math.round(seen/chs.length*100);progressFill.style.width=pct+'%';progressText.textContent=pct+'%';readingBar.style.width=Math.min(100,Math.max(0,(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100))+'%';toc.forEach(a=>a.classList.toggle('active',a.dataset.target===active));setBookmark(active);document.querySelectorAll('#bab2 .timeline-item').forEach((el,idx)=>el.classList.toggle('active',idx===Math.min(2,Math.floor(seen/5))));}
+  function hideTooltip(){tooltip.style.display='none';}
+  function renderQuiz(){const q=quizData[quizIndex];quizProgress.textContent='Soal '+(quizIndex+1)+' dari '+quizData.length;quizTitle.textContent='Soal '+(quizIndex+1);quizQuestion.textContent=q[0];quizOptions.innerHTML='';q[1].forEach((opt,i)=>{const btn=document.createElement('button');btn.className='quiz-opt';btn.type='button';btn.textContent=String.fromCharCode(65+i)+'. '+opt;btn.addEventListener('click',()=>{selectedAnswers[quizIndex]=i;save(storage.quiz,selectedAnswers);renderQuiz();});if(selectedAnswers[quizIndex]===i)btn.classList.add('selected');quizOptions.appendChild(btn);});const answered=selectedAnswers.filter(v=>Number.isInteger(v)).length;const correct=selectedAnswers.reduce((s,a,i)=>s+(a===quizData[i][2]?1:0),0);scoreDisplay.textContent=correct+'/'+quizData.length;scoreNote.textContent=answered?'Jawaban tersimpan otomatis. Skor: '+correct+' benar dari '+answered+' yang dijawab.':'Kerjakan kuis untuk melihat pemahaman Anda.';quizBack.disabled=quizIndex===0;quizNext.textContent=quizIndex===quizData.length-1?'Selesai':'Next';quizFeedback.textContent=selectedAnswers[quizIndex]===undefined?'Belum dijawab.':q[3];quizFeedback.style.color=selectedAnswers[quizIndex]===q[2]?'var(--emerald)':'var(--muted)';}
+  function goNext(){if(quizIndex<quizData.length-1){quizIndex++;renderQuiz();}else{const c=selectedAnswers.reduce((s,a,i)=>s+(a===quizData[i][2]?1:0),0);quizFeedback.textContent='Kuis selesai. Skor akhir: '+c+' dari '+quizData.length+'.';quizFeedback.style.color='var(--emerald)';}}
+  function goBack(){if(quizIndex>0){quizIndex--;renderQuiz();}}
+  function resetQuiz(){selectedAnswers=[];save(storage.quiz,selectedAnswers);quizIndex=0;renderQuiz();}
+  function applySearch(t){const c=t.trim().toLowerCase();if(!c){searchResults.textContent='Ketik kata untuk menelusuri isi buku.';return;}let found=[];document.querySelectorAll('.chapter').forEach(s=>{if(s.innerText.toLowerCase().includes(c))found.push(s.id);});searchResults.textContent=found.length?found.length+' bagian cocok. Tekan Enter untuk lompat ke hasil pertama.':'Tidak ditemukan di bab-bab utama.';if(found[0]){const t=document.getElementById(found[0]);t.style.outline='2px solid rgba(201,143,45,.5)';setTimeout(()=>t.style.outline='',1800);}}
+  function attachAccordion(){document.querySelectorAll('.accordion-item').forEach(it=>{const b=it.querySelector('.accordion-btn');b.addEventListener('click',()=>it.classList.toggle('open'));});}
+  function attachTerms(){document.querySelectorAll('.term').forEach(el=>{el.addEventListener('click',e=>{const k=el.dataset.term;tooltip.innerHTML='<strong>'+el.textContent+'</strong><span>'+(terms[k]||'Istilah penting.')+'</span>';tooltip.style.display='block';tooltip.style.left=Math.min(window.innerWidth-340,Math.max(12,e.clientX+12))+'px';tooltip.style.top=Math.min(window.innerHeight-160,e.clientY+12)+'px';e.stopPropagation();});});}
+  function restoreNotes(){noteField.value=load(storage.note,'');noteStatus.textContent=noteField.value?'Catatan tersimpan otomatis.':'Catatan tersimpan di perangkat ini.';}
+  function openSavedBookmark(){const id=load(storage.bookmark,'bab1');(document.getElementById(id)||document.getElementById('bab1')).scrollIntoView({behavior:'smooth',block:'start'});}
+  function updateInfografis(key){const box=document.getElementById('infografisBox');box.innerHTML='<strong>'+key.charAt(0).toUpperCase()+key.slice(1)+'</strong><div style="margin-top:6px;">'+infografisViews[key]+'</div>';}
+  function init(){attachAccordion();attachTerms();restoreNotes();setTheme(load(storage.theme,'light'));renderQuiz();updateInfografis('iman');updateProgress();}
+
+  document.getElementById('themeToggle').addEventListener('click',()=>setTheme(body.classList.contains('dark')?'light':'dark'));
+  document.getElementById('sidebarToggle')?.addEventListener('click',()=>body.classList.toggle('sidebar-open'));
+  scrim.addEventListener('click',()=>body.classList.remove('sidebar-open'));
+  document.getElementById('startReading').addEventListener('click',()=>document.getElementById('bab2').scrollIntoView({behavior:'smooth'}));
+  document.getElementById('openBookmarkList').addEventListener('click',openSavedBookmark);
+  document.getElementById('jumpBookmark').addEventListener('click',openSavedBookmark);
+  document.getElementById('saveBookmark').addEventListener('click',()=>{save(storage.bookmark,getCurrentChapter());noteStatus.textContent='Bookmark disimpan pada '+load(storage.bookmark,'bab1').toUpperCase()+'.';});
+  document.getElementById('clearNote').addEventListener('click',()=>{noteField.value='';save(storage.note,'');noteStatus.textContent='Catatan dihapus.';});
+  noteField.addEventListener('input',()=>{save(storage.note,noteField.value);noteStatus.textContent='Catatan tersimpan otomatis.';});
+  searchBox.addEventListener('input',()=>applySearch(searchBox.value));
+  searchBox.addEventListener('keydown',e=>{if(e.key==='Enter'){const f=[...document.querySelectorAll('.chapter')].find(s=>s.innerText.toLowerCase().includes(searchBox.value.trim().toLowerCase()));if(f)f.scrollIntoView({behavior:'smooth',block:'start'});}});
+  toc.forEach(a=>a.addEventListener('click',()=>body.classList.remove('sidebar-open')));
+  document.querySelectorAll('[data-info]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-info]').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});btn.classList.add('active');btn.setAttribute('aria-pressed','true');updateInfografis(btn.dataset.info);});});
+  quizBack.addEventListener('click',goBack);quizNext.addEventListener('click',goNext);quizReset.addEventListener('click',resetQuiz);
+  document.addEventListener('click',e=>{if(!e.target.closest('.term'))hideTooltip();});
+  window.addEventListener('scroll',updateProgress,{passive:true});
+  window.addEventListener('resize',updateProgress);
+  init();
+})();
+</script>
+</body>
+</html>
